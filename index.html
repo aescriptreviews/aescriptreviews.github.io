@@ -17,12 +17,12 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8C30SD79T"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}  // GA helper
+      function gtag(){ dataLayer.push(arguments); }
       gtag('js', new Date());
-      gtag('config', 'G-X8C30SD79T', { anonymize_ip: true }); // GA4 ID
+      gtag('config', 'G-X8C30SD79T', { anonymize_ip: true });
     </script>
 
-    <!-- Google AdSense Auto‑Ads -->
+    <!-- Google AdSense Auto‑Ads (verification + ads) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3256270907730042" crossorigin="anonymous"></script>
 
     <style>
@@ -54,6 +54,10 @@
       .card p{color:var(--muted);font-size:.95rem;margin-bottom:1.5rem;min-height:3.5em;}
       .card a.cta{display:inline-block;font-weight:600;padding:.6rem 1.2rem;border-radius:8px;color:#0c0f16;background:linear-gradient(90deg,var(--cyan),var(--pink));text-decoration:none;transition:opacity .3s ease;}
       .card a.cta:hover{opacity:.85;}
+      /* About section styling */
+      #about{padding:4rem 2rem;background:#0f131d;scroll-margin-top:6rem;}
+      #about h2{text-align:center;font-size:2rem;font-weight:800;margin-bottom:1rem;}
+      #about p{max-width:840px;margin:0 auto;font-size:1.05rem;color:var(--muted);line-height:1.75;}
       footer{padding:2rem;text-align:center;font-size:.9rem;color:var(--muted);}  
     </style>
   </head>
@@ -112,4 +116,5 @@
         </div>
         <!-- 7 -->
         <div class="card">
-          <h3>7 · DUIK Bassel – Rigging & animation toolkit</
+          <h3>7 · DUIK Bassel – Rigging & animation toolkit</h3>
+          <p>Open‑source powerhouse for character rigs, IK, and advanced animation automation.</

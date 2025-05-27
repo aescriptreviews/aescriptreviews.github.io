@@ -5,197 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>AE Script Reviews 2025 – Best After Effects Scripts & Plugins</title>
-    <meta
-      name="description"
-      content="Hands‑on reviews of the most powerful After Effects scripts and plugins. We test hundreds so you don’t have to—discover the very best tools for 2025."
-    />
+    <meta name="description" content="Hands‑on reviews of the most powerful After Effects scripts and plugins. We test hundreds so you don’t have to—discover the very best tools for 2025." />
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" />
 
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Google AdSense Auto‑Ads (domain verification + ads) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-3256270907730042" crossorigin="anonymous"></script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8C30SD79T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+      gtag('config', 'G-X8C30SD79T', { anonymize_ip: true });
+    </script>
 
     <style>
-      :root {
-        --midnight: #0c0f16;
-        --card-bg: #141925;
-        --cyan: #00eaff;
-        --pink: #ff2bdd;
-        --yellow: #ffe54c;
-        --text: #e9ecf1;
-        --muted: #8b93a7;
+      :root{
+        --midnight:#0c0f16;--card-bg:#141925;--cyan:#00eaff;--pink:#ff2bdd;--yellow:#ffe54c;
+        --text:#e9ecf1;--muted:#8b93a7;
       }
+      *{box-sizing:border-box;margin:0;padding:0}
+      html{scroll-behavior:smooth;scroll-padding-top:6rem}
+      body{font-family:"Inter",sans-serif;background:var(--midnight);color:var(--text);line-height:1.6;min-height:100vh}
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+      /* Header */
+      header{position:sticky;top:0;z-index:1000;background:rgba(12,15,22,.8);backdrop-filter:blur(12px) saturate(160%);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 2px 8px rgba(0,0,0,.6);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+      header h1{font-size:1.35rem;font-weight:700;letter-spacing:.05em}
+      nav a{color:var(--text);text-decoration:none;margin-left:1.5rem;font-weight:600;position:relative}
+      nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--pink));transition:width .3s}
+      nav a:hover::after{width:100%}
 
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 6rem;
-      }
+      /* Hero */
+      .hero{padding:6rem 2rem 8rem;text-align:center;background:radial-gradient(at 20% 20%,rgba(0,255,255,.25) 0%,transparent 50%),radial-gradient(at 80% 30%,rgba(255,43,221,.35) 0%,transparent 55%),radial-gradient(at 50% 80%,rgba(255,229,76,.2) 0%,transparent 60%),var(--midnight);background-repeat:no-repeat}
+      .hero h2{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;margin-bottom:1rem}
+      .hero p{font-size:1.075rem;color:var(--muted);max-width:680px;margin:0 auto}
 
-      body {
-        font-family: "Inter", sans-serif;
-        background: var(--midnight);
-        color: var(--text);
-        line-height: 1.6;
-        min-height: 100vh;
-      }
+      /* Grid */
+      .tools{padding:4rem 2rem 6rem;scroll-margin-top:6rem}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem;max-width:1400px;margin:0 auto}
+      .card{display:flex;flex-direction:column;background:var(--card-bg);border-radius:16px;padding:2.5rem 2rem 3rem;overflow:hidden;transition:transform .35s,box-shadow .35s,filter .35s}
+      .card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 0 12px rgba(0,234,255,.6),0 0 24px rgba(255,43,221,.45);filter:brightness(1.15) saturate(120%)}
+      .card h3{font-size:1.25rem;font-weight:700;margin-bottom:.75rem;word-break:break-word}
+      .card p{color:var(--muted);font-size:.95rem;margin-bottom:1.5rem;min-height:3.5em}
+      .cta{margin-top:auto;display:inline-block;font-weight:600;padding:.6rem 1.2rem;border-radius:8px;color:#0c0f16;background:linear-gradient(90deg,var(--cyan),var(--pink));text-decoration:none;transition:opacity .3s}
+      .cta:hover{opacity:.85}
 
-      /* Sticky Glass Header */
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        backdrop-filter: blur(12px) saturate(160%);
-        background: rgba(12, 15, 22, 0.8);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-        padding: 1rem 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
+      /* About */
+      #about{padding:4rem 2rem;background:#0f131d;scroll-margin-top:6rem}
+      #about h2{text-align:center;font-size:2rem;font-weight:800;margin-bottom:1rem}
+      #about p{max-width:840px;margin:0 auto;font-size:1.05rem;color:var(--muted);line-height:1.75}
 
-      header h1 {
-        font-size: 1.35rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-      }
-
-      nav a {
-        color: var(--text);
-        text-decoration: none;
-        margin-left: 1.5rem;
-        font-weight: 600;
-        position: relative;
-      }
-
-      nav a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        width: 0;
-        height: 2px;
-        background: linear-gradient(90deg, var(--cyan), var(--pink));
-        transition: width 0.3s ease;
-      }
-
-      nav a:hover::after {
-        width: 100%;
-      }
-
-      /* Hero Banner */
-      .hero {
-        padding: 6rem 2rem 8rem;
-        text-align: center;
-        background: radial-gradient(
-            at 20% 20%,
-            rgba(0, 255, 255, 0.25) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            at 80% 30%,
-            rgba(255, 43, 221, 0.35) 0%,
-            transparent 55%
-          ),
-          radial-gradient(
-            at 50% 80%,
-            rgba(255, 229, 76, 0.2) 0%,
-            transparent 60%
-          ),
-          var(--midnight);
-        background-repeat: no-repeat;
-      }
-
-      .hero h2 {
-        font-size: clamp(2.2rem, 5vw, 3.5rem);
-        font-weight: 900;
-        margin-bottom: 1rem;
-      }
-
-      .hero p {
-        font-size: 1.075rem;
-        color: var(--muted);
-        max-width: 680px;
-        margin: 0 auto;
-      }
-
-      /* Grid Section */
-      section.tools {
-        padding: 4rem 2rem 6rem;
-        scroll-margin-top: 6rem;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
-        width: 100%;
-        max-width: 1400px;
-        margin: 0 auto;
-      }
-
-      .card {
-        position: relative;
-        background: var(--card-bg);
-        border-radius: 16px;
-        padding: 2.5rem 2rem 3rem;
-        overflow: hidden;
-        transition: transform 0.35s ease, box-shadow 0.35s ease,
-          filter 0.35s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-6px) scale(1.03);
-        box-shadow: 0 0 12px rgba(0, 234, 255, 0.6),
-          0 0 24px rgba(255, 43, 221, 0.45);
-        filter: brightness(1.15) saturate(120%);
-      }
-
-      .card h3 {
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 0.75rem;
-      }
-
-      .card p {
-        color: var(--muted);
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-        min-height: 3.5em;
-      }
-
-      .card a.cta {
-        display: inline-block;
-        font-weight: 600;
-        padding: 0.6rem 1.2rem;
-        border-radius: 8px;
-        color: #0c0f16;
-        background: linear-gradient(90deg, var(--cyan), var(--pink));
-        text-decoration: none;
-        transition: opacity 0.3s ease;
-      }
-
-      .card a.cta:hover {
-        opacity: 0.85;
-      }
-
-      /* Footer */
-      footer {
-        padding: 2rem;
-        text-align: center;
-        font-size: 0.9rem;
-        color: var(--muted);
-      }
+      footer{padding:2rem;text-align:center;font-size:.9rem;color:var(--muted)}
     </style>
   </head>
   <body>
@@ -209,175 +74,22 @@
 
     <section class="hero">
       <h2>Top‑Ranked After Effects Tools</h2>
-      <p>
-        Save hours on every project. These eight scripts & plugins stood out in
-        our 2025 deep‑dive testing.
-      </p>
+      <p>Save hours on every project. These eight scripts & plugins stood out in our 2025 deep‑dive testing.</p>
     </section>
 
-    <!-- Tools Grid -->
     <section id="tools" class="tools">
       <div class="grid">
-        <!-- 1 -->
-        <div class="card">
-          <h3>1 · Layer Flow</h3>
-          <p>
-            Instantly duplicate, organize, and time-align layers for flawless
-            compositing.
-          </p>
-          <a
-            class="cta"
-            href="https://www.layerflow.shop"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
-        </div>
-        <!-- 2 -->
-        <div class="card">
-          <h3>2 · Flow – Easing graph editor</h3>
-          <p>
-            The quickest way to apply &amp; tweak custom motion curves right
-            inside After Effects.
-          </p>
-          <a
-            class="cta"
-            href="https://aescripts.com/flow"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
-        </div>
-        <!-- 3 -->
-        <div class="card">
-          <h3>3 · Motion Bro – Preset engine</h3>
-          <p>
-            Drag‑and‑drop transitions &amp; effects with a smart, searchable
-            preset manager.
-          </p>
-          <a
-            class="cta"
-            href="https://motionbro.net"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
-        </div>
-        <!-- 4 -->
-        <div class="card">
-          <h3>4 · FX Console – Workflow launcher</h3>
-          <p>
-            Lightning‑fast panel from Video Copilot to find effects, presets,
-            and more via hotkeys.
-          </p>
-          <a
-            class="cta"
-            href="https://www.videocopilot.net/blog/2017/10/new-fx-console-plug-in-for-after-effects/"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
-        </div>
-        <!-- 5 -->
-        <div class="card">
-          <h3>5 · Deep Glow 2 – Physically-accurate glow</h3>
-          <p>
-            Next‑gen glow with inverse‑square falloff, chromatic aberration
-            &amp; GPU acceleration.
-          </p>
-          <a
-            class="cta"
-            href="https://aescripts.com/deep-glow/"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
-        </div>
-        <!-- 6 -->
-        <div class="card">
-          <h3>6 · Animation Composer – Presets suite</h3>
-          <p>
-            Massive library of text, shape, and transition presets with
-            intuitive UI from Mister Horse.
-          </p>
-          <a
-            class="cta"
-            href="https://misterhorse.com/animation-composer"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
-        </div>
-        <!-- 7 -->
-        <div class="card">
-          <h3>7 · DUIK Bassel – Rigging & animation toolkit</h3>
-          <p>
-            Open‑source powerhouse for character rigs, IK, and advanced
-            animation automation.
-          </p>
-          <a
-            class="cta"
-            href="https://forum.rainboxlab.org"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
-        </div>
-        <!-- 8 -->
-        <div class="card">
-          <h3>8 · Stardust</h3>
-          <p>
-            Modular 3‑D particle system &amp; VFX environment all inside
-            After Effects.
-          </p>
-          <a
-            class="cta"
-            href="https://www.superluminal.tv/stardust"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
-        </div>
+        <div class="card"><h3>1 · Layer Flow</h3><p>Instantly duplicate, organize, and time‑align layers for flawless compositing.</p><a class="cta" href="https://www.layerflow.shop" target="_blank" rel="noopener">Learn More</a></div>
+        <div class="card"><h3>2 · Flow – Easing graph editor</h3><p>Apply and tweak custom motion curves right inside After Effects.</p><a class="cta" href="https://aescripts.com/flow" target="_blank" rel="noopener">Learn More</a></div>
+        <div class="card"><h3>3 · Motion Bro – Preset engine</h3><p>Drag‑and‑drop transitions & effects with a smart, searchable preset manager.</p><a class="cta" href="https://motionbro.net" target="_blank" rel="noopener">Learn More</a></div>
+        <div class="card"><h3>4 · FX Console – Workflow launcher</h3><p>Lightning‑fast panel from Video Copilot to find effects and presets via hotkeys.</p><a class="cta" href="https://www.videocopilot.net/blog/2017/10/new-fx-console-plug-in-for-after-effects/" target="_blank" rel="noopener">Learn More</a></div>
+        <div class="card"><h3>5 · Deep Glow 2 – Physically‑accurate glow</h3><p>Inverse‑square falloff, chromatic aberration & GPU acceleration for perfect glows.</p><a class="cta" href="https://aescripts.com/deep-glow/" target="_blank" rel="noopener">Learn More</a></div>
+        <div class="card"><h3>6 · Animation Composer – Presets suite</h3><p>Massive library of text, shape, and transition presets with intuitive UI.</p><a class="cta" href="https://misterhorse.com/animation-composer" target="_blank" rel="noopener">Learn More</a></div>
+        <div class="card"><h3>7 · DUIK Bassel – Rigging & animation toolkit</h3><p>Open‑source powerhouse for character rigs, IK, and advanced animation automation.</p><a class="cta" href="https://forum.rainboxlab.org" target="_blank" rel="noopener">Learn More</a></div>
+        <div class="card"><h3>8 · Stardust</h3><p>Modular 3‑D particle system & VFX environment all inside After Effects.</p><a class="cta" href="https://www.superluminal.tv/stardust" target="_blank" rel="noopener">Learn More</a></div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" style="padding: 4rem 2rem; background: #0f131d">
-      <h2
-        style="
-          text-align: center;
-          font-size: 2rem;
-          font-weight: 800;
-          margin-bottom: 1rem;
-        "
-      >
-        About Us
-      </h2>
-      <p
-        style="
-          max-width: 840px;
-          margin: 0 auto;
-          font-size: 1.05rem;
-          color: var(--muted);
-          line-height: 1.75;
-        "
-      >
-        We are an independent collective of motion designers and post‑production
-        engineers dedicated to finding the very best workflow tools. Each year
-        we run extensive hands‑on tests—benchmarking speed, usability, and
-        creativity—to shortlist the scripts & plugins that genuinely save time
-        and elevate your work. Have a recommendation or question? Reach us at
-        <a
-          href="mailto:aescriptreviews2025@gmail.com"
-          style="color: var(--cyan); text-decoration: none"
-          >aescriptreviews2025@gmail.com</a
-        >.
-      </p>
-    </section>
-
-    <footer>
-      © 2025 AE Script Reviews. All product names, logos, and brands are
-      property of their respective owners.
-    </footer>
-  </body>
-</html>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are an independent collective of motion designers and post‑production engineers dedicated to finding the very best workflow tools. Each year we run extensive hands‑on tests—benchmarking speed, usability, and creativity—to shortlist the scripts & plugins that genuinely save time and elevate your work. Have a recommendation or question?  

@@ -1,694 +1,659 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AE Script Reviews 2025 - Best After Effects Scripts & Plugins</title>
-    <meta name="description" content="Expert reviews of the best After Effects scripts and plugins for 2025. Find the top AE tools to enhance your workflow and boost productivity.">
-    <meta name="keywords" content="after effects scripts, ae plugins, best ae scripts 2025, after effects tools, motion graphics scripts, video editing plugins">
-    
+    <meta
+      name="description"
+      content="Expert reviews of the best After Effects scripts and plugins for 2025. Find the top AE tools to enhance your workflow and boost productivity."
+    />
+    <meta
+      name="keywords"
+      content="after effects scripts, ae plugins, best ae scripts 2025, after effects tools, motion graphics scripts, video editing plugins"
+    />
+
     <!-- Open Graph for social sharing -->
-    <meta property="og:title" content="AE Script Reviews 2025 - Best After Effects Scripts">
-    <meta property="og:description" content="Expert reviews of the top After Effects scripts and plugins for 2025">
-    <meta property="og:type" content="website">
-    
+    <meta
+      property="og:title"
+      content="AE Script Reviews 2025 - Best After Effects Scripts"
+    />
+    <meta
+      property="og:description"
+      content="Expert reviews of the top After Effects scripts and plugins for 2025"
+    />
+    <meta property="og:type" content="website" />
+
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_GA_MEASUREMENT_ID');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "YOUR_GA_MEASUREMENT_ID");
     </script>
     <!-- Replace YOUR_GA_MEASUREMENT_ID with your actual Google Analytics ID -->
-    
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #2D3142;
-            background: #EAE8FF;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        header {
-            background: rgba(234, 232, 255, 0.8);
-            backdrop-filter: saturate(180%) blur(20px);
-            color: #2D3142;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(216, 213, 219, 0.5);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #2D3142;
-            letter-spacing: -0.01em;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-        
-        .nav-links a {
-            color: #ADACB5;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 400;
-            font-size: 0.95rem;
-        }
-        
-        .nav-links a:hover {
-            color: #B0D7FF;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #EAE8FF 0%, #D8D5DB 100%);
-            color: #2D3142;
-            padding: 140px 0 100px;
-            text-align: center;
-        }
-        
+      :root {
+        --bg-dark: #0b0d1e;
+        --bg-light: #1c1e35;
+        --primary: #00d2ff;
+        --secondary: #ff4dcb;
+        --accent: #ffb400;
+        --card-bg: #ffffff;
+        --text-primary: #ffffff;
+        --text-secondary: #c3c4d9;
+        --heading: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text-primary);
+        background: var(--bg-dark);
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header */
+      header {
+        background: rgba(27, 29, 58, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        color: var(--text-primary);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--primary);
+        letter-spacing: -0.01em;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+      }
+
+      .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #16073e 0%, #420061 100%);
+        color: var(--text-primary);
+        padding: 140px 0 100px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+        color: var(--heading);
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+      }
+
+      .hero .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+
+      .hero .year-badge {
+        background: linear-gradient(135deg, var(--secondary), var(--primary));
+        color: white;
+        padding: 12px 28px;
+        border-radius: 24px;
+        font-size: 1rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 2rem;
+        letter-spacing: 0.3px;
+      }
+
+      /* Editor's Choice Section */
+      .editors-choice {
+        background: linear-gradient(135deg, #420061 0%, #16073e 100%);
+        color: var(--text-primary);
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .editors-choice::before {
+        content: "\1F3C6"; /* trophy */
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 3rem;
+        opacity: 0.15;
+      }
+
+      .choice-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(20px);
+        border-radius: 24px;
+        padding: 4rem;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        max-width: 900px;
+        margin: 0 auto;
+        color: #1c1e35;
+      }
+
+      .choice-badge {
+        background: linear-gradient(135deg, var(--secondary), var(--primary));
+        color: white;
+        padding: 12px 24px;
+        border-radius: 24px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      .choice-card h2 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        color: #1c1e35;
+        letter-spacing: -0.02em;
+      }
+
+      .rating {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .choice-description {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.5;
+        color: #44455e;
+        font-weight: 400;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .features-list {
+        list-style: none;
+        margin: 2.5rem 0;
+        text-align: left;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .features-list li {
+        padding: 0.8rem 0;
+        font-size: 1.05rem;
+        color: #44455e;
+      }
+
+      .features-list li:before {
+        content: "\2713"; /* check */
+        color: var(--primary);
+        margin-right: 0.8rem;
+        font-weight: 600;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: var(--secondary);
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        border-radius: 24px;
+        font-weight: 600;
+        font-size: 1.05rem;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        box-shadow: 0 4px 16px rgba(255, 77, 203, 0.4);
+        border: none;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(255, 77, 203, 0.6);
+        background: #c60097;
+      }
+
+      .cta-button.secondary {
+        background: transparent;
+        color: var(--secondary);
+        border: 2px solid var(--secondary);
+        box-shadow: none;
+      }
+
+      .cta-button.secondary:hover {
+        background: var(--secondary);
+        color: white;
+        box-shadow: 0 4px 16px rgba(255, 77, 203, 0.4);
+      }
+
+      /* Script Reviews Grid */
+      .reviews-section {
+        padding: 100px 0;
+        background: var(--bg-dark);
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-header h2 {
+        font-size: 3rem;
+        color: var(--heading);
+        margin-bottom: 1rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .section-header p {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        font-weight: 400;
+      }
+
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 2.5rem;
+      }
+
+      .review-card {
+        background: var(--card-bg);
+        border-radius: 24px;
+        padding: 2.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #1c1e35;
+      }
+
+      .review-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      .review-rank {
+        position: absolute;
+        top: -12px;
+        left: 24px;
+        background: linear-gradient(135deg, var(--secondary), var(--primary));
+        color: white;
+        padding: 8px 16px;
+        border-radius: 16px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        letter-spacing: 0.3px;
+      }
+
+      .review-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+        color: #1c1e35;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      .review-rating {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .review-description {
+        color: #44455e;
+        margin-bottom: 1.8rem;
+        line-height: 1.5;
+        font-size: 1rem;
+      }
+
+      .review-features {
+        list-style: none;
+        margin-bottom: 2rem;
+      }
+
+      .review-features li {
+        padding: 0.4rem 0;
+        color: #44455e;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+
+      .review-features li:before {
+        content: "\2022";
+        color: var(--secondary);
+        margin-right: 0.8rem;
+        font-weight: bold;
+      }
+
+      .review-price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 1.5rem;
+      }
+
+      .review-buttons {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+
+      .review-btn {
+        padding: 12px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .review-btn.primary {
+        background: var(--primary);
+        color: #1c1e35;
+        box-shadow: 0 2px 8px rgba(0, 210, 255, 0.4);
+      }
+
+      .review-btn.primary:hover {
+        background: #0099c9;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 210, 255, 0.6);
+      }
+
+      .review-btn.secondary {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .review-btn.secondary:hover {
+        background: var(--primary);
+        color: #1c1e35;
+        transform: translateY(-1px);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--bg-light);
+        color: var(--text-secondary);
+        padding: 60px 0 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .footer-section h3 {
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .footer-section a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.8rem;
+        transition: color 0.3s ease;
+        font-size: 0.95rem;
+      }
+
+      .footer-section a:hover {
+        color: var(--primary);
+      }
+
+      .footer-section p {
+        color: var(--text-secondary);
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+        font-size: 0.95rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
         .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            color: #2D3142;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
+          font-size: 2.5rem;
         }
-        
+
         .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: #ADACB5;
-            font-weight: 400;
+          font-size: 1.2rem;
         }
-        
-        .hero .year-badge {
-            background: linear-gradient(135deg, #B0D7FF, #2D3142);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 24px;
-            font-size: 1rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 2rem;
-            letter-spacing: 0.3px;
+
+        .nav-links {
+          flex-direction: column;
+          gap: 1rem;
         }
-        
-        /* Editor's Choice Section */
-        .editors-choice {
-            background: linear-gradient(135deg, #D8D5DB 0%, #B0D7FF 100%);
-            color: #2D3142;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .editors-choice::before {
-            content: '🏆';
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            font-size: 3rem;
-            opacity: 0.2;
-        }
-        
-        .choice-card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 4rem;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(45, 49, 66, 0.1);
-            border: 1px solid rgba(216, 213, 219, 0.6);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .choice-badge {
-            background: linear-gradient(135deg, #2D3142, #B0D7FF);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 24px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        
-        .choice-card h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            color: #2D3142;
-            letter-spacing: -0.02em;
-        }
-        
-        .rating {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .choice-description {
-            font-size: 1.25rem;
-            margin-bottom: 2.5rem;
-            line-height: 1.5;
-            color: #ADACB5;
-            font-weight: 400;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .features-list {
-            list-style: none;
-            margin: 2.5rem 0;
-            text-align: left;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .features-list li {
-            padding: 0.8rem 0;
-            font-size: 1.05rem;
-            color: #515154;
-        }
-        
-        .features-list li:before {
-            content: "✓";
-            color: #007AFF;
-            margin-right: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #007AFF;
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            border-radius: 24px;
-            font-weight: 500;
-            font-size: 1.05rem;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
-            border: none;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 122, 255, 0.4);
-            background: #0056CC;
-        }
-        
-        .cta-button.secondary {
-            background: transparent;
-            color: #007AFF;
-            border: 2px solid #007AFF;
-            box-shadow: none;
-        }
-        
-        .cta-button.secondary:hover {
-            background: #007AFF;
-            color: white;
-            box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
-        }
-        
-        /* Script Reviews Grid */
-        .reviews-section {
-            padding: 100px 0;
-            background: #EAE8FF;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-header h2 {
-            font-size: 3rem;
-            color: #2D3142;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-        
-        .section-header p {
-            font-size: 1.2rem;
-            color: #ADACB5;
-            font-weight: 400;
-        }
-        
+
         .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2.5rem;
+          grid-template-columns: 1fr;
         }
-        
-        .review-card {
-            background: white;
-            border-radius: 24px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 20px rgba(45, 49, 66, 0.08);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            border: 1px solid rgba(216, 213, 219, 0.3);
+
+        .choice-card {
+          padding: 2rem;
         }
-        
-        .review-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 40px rgba(45, 49, 66, 0.15);
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
         }
-        
-        .review-rank {
-            position: absolute;
-            top: -12px;
-            left: 24px;
-            background: linear-gradient(135deg, #2D3142, #B0D7FF);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 16px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 0.3px;
-        }
-        
-        .review-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 0.8rem;
-            color: #2D3142;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-        }
-        
-        .review-rating {
-            font-size: 1.3rem;
-            margin-bottom: 1.2rem;
-        }
-        
-        .review-description {
-            color: #ADACB5;
-            margin-bottom: 1.8rem;
-            line-height: 1.5;
-            font-size: 1rem;
-        }
-        
-        .review-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        
-        .review-features li {
-            padding: 0.4rem 0;
-            color: #ADACB5;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-        
-        .review-features li:before {
-            content: "•";
-            color: #B0D7FF;
-            margin-right: 0.8rem;
-            font-weight: bold;
-        }
-        
-        .review-price {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #B0D7FF;
-            margin-bottom: 1.5rem;
-        }
-        
-        .review-buttons {
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
-        
-        .review-btn {
-            padding: 12px 20px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .review-btn.primary {
-            background: #B0D7FF;
-            color: #2D3142;
-            box-shadow: 0 2px 8px rgba(176, 215, 255, 0.25);
-        }
-        
-        .review-btn.primary:hover {
-            background: #2D3142;
-            color: white;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(45, 49, 66, 0.35);
-        }
-        
-        .review-btn.secondary {
-            background: #D8D5DB;
-            color: #2D3142;
-            border: 1px solid #ADACB5;
-        }
-        
-        .review-btn.secondary:hover {
-            background: #ADACB5;
-            transform: translateY(-1px);
-        }
-        
-        /* Footer */
-        footer {
-            background: #D8D5DB;
-            color: #2D3142;
-            padding: 60px 0 40px;
-            border-top: 1px solid rgba(45, 49, 66, 0.1);
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-section h3 {
-            color: #2D3142;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-        
-        .footer-section a {
-            color: #ADACB5;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.8rem;
-            transition: color 0.3s ease;
-            font-size: 0.95rem;
-        }
-        
-        .footer-section a:hover {
-            color: #B0D7FF;
-        }
-        
-        .footer-section p {
-            color: #ADACB5;
-            line-height: 1.5;
-            margin-bottom: 0.8rem;
-            font-size: 0.95rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .choice-card {
-                padding: 2rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <nav class="container">
-            <div class="logo">AE Script Reviews</div>
-            <ul class="nav-links">
-                <li><a href="#top-scripts">Top Scripts</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
+      <nav class="container">
+        <div class="logo">AE Script Reviews</div>
+        <ul class="nav-links">
+          <li><a href="#top-scripts">Top Scripts</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Best After Effects Scripts</h1>
-            <p class="subtitle">Expert Reviews & Recommendations</p>
-            <div class="year-badge">🎯 2025 Edition</div>
-            <p>Comprehensive reviews of the top After Effects scripts and plugins to supercharge your workflow</p>
-        </div>
+      <div class="container">
+        <h1>Best After Effects Scripts</h1>
+        <p class="subtitle">Expert Reviews & Recommendations</p>
+        <div class="year-badge">🎯 2025 Edition</div>
+        <p>
+          Comprehensive reviews of the top After Effects scripts and plugins to
+          supercharge your workflow
+        </p>
+      </div>
     </section>
 
     <!-- Editor's Choice Section -->
     <section class="editors-choice" id="top-scripts">
-        <div class="container">
-            <div class="choice-card">
-                <div class="choice-badge">🏆 EDITOR'S CHOICE 2025</div>
-                <h2>Layer Flow</h2>
-                <div class="rating">⭐⭐⭐⭐⭐</div>
-                <p class="choice-description">
-                    "After testing over 100 After Effects scripts, Layer Flow stands out as the most comprehensive workflow enhancement tool. It's not just a script - it's a complete productivity transformation."
-                </p>
-                
-                <ul class="features-list">
-                    <li>40+ Professional Functions in One Package</li>
-                    <li>Intelligent Layer Management & Automation</li>
-                    <li>Smart Copy/Paste with Complete Property Preservation</li>
-                    <li>Advanced Pre-Composition Tools</li>
-                    <li>Professional Color Coding System</li>
-                    <li>One-Click Layer Creation (Nulls, Cameras, Adjustments)</li>
-                    <li>Strategic Keyframe Automation</li>
-                    <li>Batch Renaming & Organization Tools</li>
-                </ul>
-                
-                <div class="review-price" style="color: #ADACB5; font-size: 1.8rem; margin-bottom: 2rem;">
-                    <span style="text-decoration: line-through; opacity: 0.6; font-size: 1.4rem;">$40</span> 
-                    <strong style="color: #B0D7FF;">$10 Launch Special!</strong>
-                </div>
-                
-                <div class="cta-buttons">
-                    <a href="https://layerflow.shop" class="cta-button">Get Layer Flow Now</a>
-                    <a href="#layer-flow-review" class="cta-button secondary">Read Full Review</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="choice-card">
+          <div class="choice-badge">🏆 EDITOR'S CHOICE 2025</div>
+          <h2>Layer Flow</h2>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="choice-description">
+            "After testing over 100 After Effects scripts, Layer Flow stands out
+            as the most comprehensive workflow enhancement tool. It's not just a
+            script - it's a complete productivity transformation."
+          </p>
+
+          <ul class="features-list">
+            <li>40+ Professional Functions in One Package</li>
+            <li>Intelligent Layer Management & Automation</li>
+            <li>Smart Copy/Paste with Complete Property Preservation</li>
+            <li>Advanced Pre-Composition Tools</li>
+            <li>Professional Color Coding System</li>
+            <li>One-Click Layer Creation (Nulls, Cameras, Adjustments)</li>
+            <li>Strategic Keyframe Automation</li>
+            <li>Batch Renaming & Organization Tools</li>
+          </ul>
+
+          <div
+            class="review-price"
+            style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 2rem"
+          >
+            <span
+              style="
+                text-decoration: line-through;
+                opacity: 0.6;
+                font-size: 1.4rem;
+              "
+              >$40</span
+            >
+            <strong style="color: var(--primary)">$10 Launch Special!</strong>
+          </div>
+
+          <div class="cta-buttons">
+            <a href="https://layerflow.shop" class="cta-button"
+              >Get Layer Flow Now</a
+            >
+            <a href="#layer-flow-review" class="cta-button secondary"
+              >Read Full Review</a
+            >
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Script Reviews Section -->
     <section class="reviews-section" id="reviews">
-        <div class="container">
-            <div class="section-header">
-                <h2>Complete Script Reviews</h2>
-                <p>In-depth analysis of the best After Effects scripts and plugins</p>
-            </div>
-            
-            <div class="reviews-grid">
-                <!-- Layer Flow Detailed Review -->
-                <div class="review-card" id="layer-flow-review">
-                    <div class="review-rank">#1</div>
-                    <h3>Layer Flow - Complete Workflow Suite</h3>
-                    <div class="review-rating">⭐⭐⭐⭐⭐ (5/5)</div>
-                    <p class="review-description">
-                        Layer Flow revolutionizes After Effects workflow with 40+ professional functions. Perfect for motion designers, video editors, and AE enthusiasts who want to eliminate tedious manual tasks.
-                    </p>
-                    <ul class="review-features">
-                        <li>Work Area Tools - Automatic timing optimization</li>
-                        <li>Smart Copy/Paste - Complete property preservation</li>
-                        <li>Intelligent Pre-Composition with 3 modes</li>
-                        <li>16 Creative Color Presets + Custom Options</li>
-                        <li>Professional Layer Creation Suite</li>
-                        <li>Strategic Keyframe Automation</li>
-                        <li>Batch Renaming & Organization</li>
-                        <li>Professional Interface with 9 Tool Categories</li>
-                    </ul>
-                    <div class="review-price">Launch Price: $10 (Reg $40)</div>
-                    <div class="review-buttons">
-                        <a href="https://layerflow.shop" class="review-btn primary">Get Layer Flow</a>
-                        <a href="https://layerflow.shop#demo" class="review-btn secondary">View Demo</a>
-                    </div>
-                </div>
-
-                <!-- Flow Review -->
-                <div class="review-card">
-                    <div class="review-rank">#2</div>
-                    <h3>Flow - Animation Curve Editor</h3>
-                    <div class="review-rating">⭐⭐⭐⭐⭐ (5/5)</div>
-                    <p class="review-description">
-                        Revolutionizes keyframe animation with its clean, modern curve editor. No more struggling with speed & influence - just create curves and hit apply!
-                    </p>
-                    <ul class="review-features">
-                        <li>Intuitive curve editor interface</li>
-                        <li>25+ preset animation curves included</li>
-                        <li>Custom preset library system</li>
-                        <li>CSS cubic-bezier compatibility</li>
-                    </ul>
-                    <div class="review-price">$40</div>
-                    <div class="review-buttons">
-                        <a href="https://aescripts.com/flow/" class="review-btn primary">Learn More</a>
-                        <a href="https://flow.lova.tt/" class="review-btn secondary">Documentation</a>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-rank">#3</div>
-                    <h3>True Comp Duplicator</h3>
-                    <div class="review-rating">⭐⭐⭐⭐☆ (4/5)</div>
-                    <p class="review-description">
-                        Creates complete duplicates of composition hierarchies including sub-comps with many options. Essential for template creators and complex projects.
-                    </p>
-                    <ul class="review-features">
-                        <li>Smart composition duplication</li>
-                        <li>Preserves folder hierarchy</li>
-                        <li>Expression updating options</li>
-                        <li>Batch processing capabilities</li>
-                    </ul>
-                    <div class="review-price">Pay What You Want</div>
-                    <div class="review-buttons">
-                        <a href="https://aescripts.com/true-comp-duplicator/" class="review-btn primary">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-rank">#4</div>
-                    <h3>Duik Ángela (Free)</h3>
-                    <div class="review-rating">⭐⭐⭐⭐⭐ (5/5)</div>
-                    <p class="review-description">
-                        Comprehensive rigging and animation toolkit for character animation. Industry standard for 2D character rigging in After Effects.
-                    </p>
-                    <ul class="review-features">
-                        <li>Complete character rigging system</li>
-                        <li>IK/FK controls and bones</li>
-                        <li>Procedural walk cycles</li>
-                        <li>50+ animation features</li>
-                    </ul>
-                    <div class="review-price">Free</div>
-                    <div class="review-buttons">
-                        <a href="https://rxlaboratory.org/tools/duik-angela/" class="review-btn primary">Download Free</a>
-                        <a href="https://rxlaboratory.org/download-duik-angela/" class="review-btn secondary">Get Started</a>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-rank">#5</div>
-                    <h3>Motion Tweaks</h3>
-                    <div class="review-rating">⭐⭐⭐⭐☆ (4/5)</div>
-                    <p class="review-description">
-                        Collection of essential motion tools created by Motion Design School. Small but mighty tools that save time on daily tasks.
-                    </p>
-                    <ul class="review-features">
-                        <li>3D path controls and primitives</li>
-                        <li>Shape animation tools</li>
-                        <li>Quick wiggle and path trimming</li>
-                        <li>20+ small utility tools</li>
-                    </ul>
-                    <div class="review-price">$49</div>
-                    <div class="review-buttons">
-                        <a href="https://aescripts.com/motion-tweaks/" class="review-btn primary">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-rank">#6</div>
-                    <h3>FX Console (Free)</h3>
-                    <div class="review-rating">⭐⭐⭐⭐☆ (4/5)</div>
-                    <p class="review-description">
-                        Essential workflow improvement tool from Video Copilot. Quick access to effects, presets, and project management tools.
-                    </p>
-                    <ul class="review-features">
-                        <li>Quick effect search and application</li>
-                        <li>Preset management system</li>
-                        <li>Screenshot functionality</li>
-                        <li>Project organization tools</li>
-                    </ul>
-                    <div class="review-price">Free</div>
-                    <div class="review-buttons">
-                        <a href="https://www.videocopilot.net/blog/2016/01/fx-console-is-now-available/" class="review-btn primary">Download Free</a>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Complete Script Reviews</h2>
+          <p>In-depth analysis of the best After Effects scripts and plugins</p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer id="about">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Reviews</h3>
-                    <a href="#top-scripts">Top Scripts 2025</a>
-                    <a href="#reviews">All Reviews</a>
-                    <a href="#categories">Categories</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <a href="#">Buying Guide</a>
-                    <a href="#">Installation Help</a>
-                    <a href="#">Video Tutorials</a>
-                </div>
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <p>Expert reviews of After Effects scripts and plugins to help you choose the best tools for your workflow.</p>
-                    <p>Contact: aescriptreviews2025@gmail.com</p>
-                </div>
-            </div>
-            <p style="border-top: 1px solid rgba(45, 49, 66, 0.1); padding-top: 2rem; color: #ADACB5; text-align: center; font-size: 0.9rem;">
-                © 2025 AE Script Reviews - Helping creators find the best After Effects tools
+        <div class="reviews-grid">
+          <!-- Layer Flow Detailed Review -->
+          <div class="review-card" id="layer-flow-review">
+            <div class="review-rank">#1</div>
+            <h3>Layer Flow - Complete Workflow Suite</h3>
+            <div class="review-rating">⭐⭐⭐⭐⭐ (5/5)</div>
+            <p class="review-description">
+              Layer Flow revolutionizes After Effects workflow with 40+
+              professional functions. Perfect for motion designers, video
+              editors, and AE enthusiasts who want to eliminate tedious manual
+              tasks.
             </p>
-        </div>
-    </footer>
-</body>
-</html>
+            <ul class="review-features">
+              <li>Work Area Tools - Automatic timing optimization</li>
+              <li>Smart Copy/Paste - Complete property preservation</li>
+              <li>Intelligent Pre-Composition with 3 modes</li>
+              <li>16 Creative Color Presets + Custom Options</li>
+              <li>Professional Layer Creation Suite</li>
+              <li>Strategic Keyframe Automation</li>
+              <li>Batch Renaming & Organization</li>
+              <li>Professional Interface with 9 Tool Categories</li>
+            </ul>
+            <div class="review-price">Launch Price: $10 (Reg $40)</div>
+            <div class="review-buttons">
+              <a href="https://layerflow.shop" class="review-btn primary"
+                >Get Layer Flow</a
+              >
+              <a href="https://layerflow.shop#demo" class="review-btn secondary"
+                >View Demo</a
+              >
+            </div>
+          </div>
+
+          <!-- Flow Review -->
+          <div class="review-card">
+            <div class="review-rank">#2</div>
+            <h3>Flow - Animation Curve Editor</h3>
+            <div class="review-rating">⭐⭐⭐⭐⭐ (5/5)</div>
+            <p class="review-description">
+              Revolutionizes keyframe animation with its clean, modern curve
+              editor. No more struggling with speed & influence - just create
+              curves and hit apply!
+            </p>
+            <ul class="review-features">
+              <li>Intuitive curve editor interface</li>
+              <li>25+ preset animation curves included</li>
+              <li>Custom preset library system</li>
+              <li>CSS cubic-bezier compatibility</li>
+            </ul>
+            <div class="review-price">$40</div>
+            <div class="review-buttons">
+              <a href="https://aescripts.com/flow/" class="review-btn primary"
+                >Learn More</a
+              >
+              <a href="https://flow.lova.tt/" class="review-btn secondary"
+                >Documentation</a
+              >
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-rank">#3</div>
+            <h3>True Comp Duplicator</h3>
+            <div class="review-rating">⭐⭐⭐⭐☆ (4/5)</div>
+            <p class="review-description">
+              Creates complete duplicates of composition hierarchies including
+              sub-comps with many options. Essential for template creators and
+              complex projects.
+            </

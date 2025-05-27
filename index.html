@@ -5,283 +5,273 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>AE Script Reviews 2025 – Best After Effects Scripts & Plugins</title>
-    <meta name="description" content="Expert, hands‑on reviews of the most powerful After Effects scripts and plugins. We test hundreds so you don’t have to—discover the very best tools for 2025." />
-    <meta name="keywords" content="after effects scripts, ae plugins, best ae scripts 2025, after effects plugins, motion graphics workflow" />
+    <meta name="description" content="Hands‑on reviews of the most powerful After Effects scripts and plugins. We test hundreds so you don’t have to—discover the very best tools for 2025." />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="AE Script Reviews 2025 – Premium After Effects Scripts & Plugins" />
-    <meta property="og:description" content="Independent reviews of the top After Effects scripts & plugins. Find the tools that super‑charge your creative workflow." />
-
+    <!-- 🌈 Vibrant Color Theme -->
     <style>
       :root {
-        /* Vibrant palette */
-        --midnight: #090917;
-        --card-bg: #141428;
-        --text: #ffffff;
-        --accent-hotpink: #ff2fa4;
-        --accent-cyan: #00e3e3;
-        --accent-yellow: #ffd447;
+        --midnight: #0b0d1a;
+        --hot-pink: #ff2ea4;
+        --electric-cyan: #00e5ff;
+        --sun-yellow: #ffe14d;
+        --text-light: #f3f7ff;
+        --card-bg: rgba(255, 255, 255, 0.03);
+        --blur: blur(18px);
       }
 
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 6rem; /* space for sticky header */
-      }
-
-      body {
-        margin: 0;
-        font-family: "Inter", Arial, sans-serif;
-        color: var(--text);
-        background: var(--midnight);
-      }
-
-      /* ---------- STICKY HEADER ---------- */
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.75rem 2rem;
-        background: rgba(9, 9, 23, 0.7); /* translucent */
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-      }
-
-      /* colorful 2‑px accent line under header */
-      header::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg, var(--accent-hotpink), var(--accent-cyan));
-      }
-
-      header h1 {
-        font-size: 1.4rem;
-        margin: 0;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
+      /* ------------------ Base ------------------ */
+      * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
-
-      nav a {
-        color: var(--text);
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        color-scheme: dark;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--midnight);
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+      a {
+        color: var(--electric-cyan);
         text-decoration: none;
-        font-weight: 600;
-        padding: 0.4rem 0.9rem;
-        border-radius: 0.4rem;
-        transition: background 0.2s, color 0.2s;
+      }
+      a:hover {
+        text-decoration: underline;
       }
 
-      nav a:hover {
-        background: rgba(255, 255, 255, 0.12);
+      /* ------------------ Header ------------------ */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+        backdrop-filter: var(--blur);
+        background: rgba(11, 13, 26, 0.6);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        border-bottom: 2px solid transparent;
+        background-image: linear-gradient(to right, transparent, var(--hot-pink) 50%, transparent 75%);
+        background-size: 200% 2px;
+        background-position: left bottom;
+        animation: slide-underline 6s linear infinite;
+      }
+      @keyframes slide-underline {
+        0% {
+          background-position: left bottom;
+        }
+        100% {
+          background-position: right bottom;
+        }
+      }
+      .logo {
+        font-weight: 700;
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+      }
+      nav ul {
+        display: flex;
+        gap: 1.25rem;
+        list-style: none;
       }
 
-      /* ---------- HERO / TOP BANNER ---------- */
+      /* ------------------ Hero Banner ------------------ */
       .hero {
-        position: relative;
-        padding: 6.5rem 1rem 4.5rem;
+        padding: 8rem 2rem 6rem;
         text-align: center;
+        position: relative;
         overflow: hidden;
-        /* layered radial bursts */
-        background:
-          radial-gradient(circle at 25% -20%, var(--accent-hotpink) 0%, transparent 60%),
-          radial-gradient(circle at 75% -10%, var(--accent-cyan) 0%, transparent 60%),
-          radial-gradient(circle at 50% 120%, var(--accent-yellow) 0%, transparent 65%),
+        background: radial-gradient(circle at 20% 20%, var(--hot-pink) 0%, transparent 40%),
+          radial-gradient(circle at 80% 80%, var(--electric-cyan) 0%, transparent 45%),
+          radial-gradient(circle at 50% 100%, var(--sun-yellow) 0%, transparent 50%),
           var(--midnight);
       }
-
-      /* subtle diagonal texture overlay */
       .hero::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 12px);
-        mix-blend-mode: overlay;
+        background-image: repeating-linear-gradient(135deg, transparent 0 12px, rgba(255, 255, 255, 0.02) 12px 24px);
         pointer-events: none;
       }
-
-      .hero h2 {
-        font-size: 2.75rem;
-        max-width: 48rem;
-        margin: 0 auto 1.2rem;
-        line-height: 1.2;
+      .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 800;
+        margin-bottom: 0.5rem;
       }
-
       .hero p {
+        max-width: 680px;
+        margin: 0 auto;
         font-size: 1.125rem;
-        max-width: 46rem;
-        margin: 0 auto 0;
-        line-height: 1.6;
+        opacity: 0.9;
       }
 
-      /* ---------- TOOL CARDS GRID ---------- */
+      /* ------------------ Content Area Background ------------------ */
+      .content-bg {
+        /* New improved under‑banner backdrop */
+        background: linear-gradient(180deg, rgba(0, 229, 255, 0.05) 0%, rgba(255, 46, 164, 0.05) 100%),
+          repeating-radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.03) 0 4px, transparent 4px 12px),
+          var(--midnight);
+        padding: 4rem 2rem 6rem;
+      }
+
+      /* ------------------ Grid of Cards ------------------ */
       .tools {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 1.75rem;
-        padding: 0 1.5rem 5rem;
-        max-width: 1440px;
+        max-width: 1200px;
         margin: 0 auto;
         scroll-margin-top: 6rem;
       }
-
       .card {
         background: var(--card-bg);
-        border-radius: 1rem;
-        padding: 2rem 1.5rem 2.5rem;
+        backdrop-filter: var(--blur);
+        padding: 1.5rem;
+        border-radius: 14px;
         position: relative;
         overflow: hidden;
-        transition: transform 0.25s;
-        min-height: 260px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.25s ease, border-color 0.25s ease;
       }
-
-      .card:hover { transform: translateY(-6px); }
-
-      /* animated rainbow border */
-      .card::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: conic-gradient(var(--accent-hotpink), var(--accent-cyan), var(--accent-yellow), var(--accent-hotpink));
-        animation: spin 6s linear infinite;
-        z-index: -2;
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: var(--electric-cyan);
       }
-
-      .card::after {
-        content: "";
-        position: absolute;
-        inset: 3px;
-        background: var(--card-bg);
-        border-radius: 0.95rem;
-        z-index: -1;
-      }
-
-      @keyframes spin { to { transform: rotate(1turn); } }
-
       .card h3 {
-        margin-top: 0;
-        font-size: 1.25rem;
         margin-bottom: 0.5rem;
+        font-size: 1.25rem;
       }
-
       .card p {
         font-size: 0.95rem;
-        line-height: 1.5;
+        opacity: 0.85;
       }
-
-      .card a {
-        display: inline-block;
+      .card a.cta {
         margin-top: 1rem;
-        padding: 0.55rem 1.1rem;
-        background: var(--accent-hotpink);
-        color: var(--text);
-        text-decoration: none;
-        border-radius: 0.45rem;
+        display: inline-block;
         font-weight: 600;
-        transition: background 0.2s;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        border: 1px solid var(--electric-cyan);
+      }
+      .card a.cta:hover {
+        background: var(--electric-cyan);
+        color: var(--midnight);
       }
 
-      .card a:hover { background: var(--accent-cyan); }
-
-      /* ---------- ABOUT ---------- */
-      #about {
-        padding: 4.5rem 2rem 6rem;
-        background: linear-gradient(180deg, var(--midnight) 0%, #0f0f2a 100%);
-        scroll-margin-top: 6rem;
+      /* ------------------ About Toggle ------------------ */
+      details.about {
+        max-width: 800px;
+        margin: 4rem auto;
+        background: var(--card-bg);
+        padding: 1.5rem 2rem;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      details.about summary {
+        font-weight: 700;
+        cursor: pointer;
+        list-style: none;
+      }
+      details.about[open] summary::-webkit-details-marker {
+        display: none;
       }
 
-      #about h2 {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-      }
-
-      #about p {
-        max-width: 52rem;
-        margin: 0 auto 1.25rem;
-        font-size: 1.05rem;
-        line-height: 1.6;
-        text-align: center;
-      }
-
-      #about a { color: var(--accent-yellow); font-weight: 600; }
-
-      /* ---------- FOOTER ---------- */
+      /* ------------------ Footer ------------------ */
       footer {
         text-align: center;
-        padding: 2rem 1rem 1.5rem;
-        font-size: 0.85rem;
-        background: var(--card-bg);
+        padding: 3rem 1rem 4rem;
+        font-size: 0.9rem;
+        opacity: 0.7;
       }
     </style>
   </head>
-
   <body>
-    <!-- ------------ NAVBAR ------------ -->
+    <!-- ===== Header ===== -->
     <header>
-      <h1>AE Script Reviews</h1>
+      <div class="logo">AE Script Reviews</div>
       <nav>
         <ul>
-          <li><a href="#top-tools">Scripts & Plugins</a></li>
+          <li><a href="#tools">Scripts & Plugins</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="mailto:aescriptreviews2025@gmail.com">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- ------------ HERO ------------ -->
-    <section class="hero" id="top">
-      <h2>Discover the Best After Effects Scripts & Plugins of 2025</h2>
-      <p>Save hours in post‑production with our hand‑picked, battle‑tested list of must‑have tools. We’ve done the deep testing—so you can focus on creating.</p>
+    <!-- ===== Hero / Banner Section ===== -->
+    <section class="hero">
+      <h1>Find Your Next After Effects Super‑Power</h1>
+      <p>We push every script & plugin to the limit so you only install the ones that unlock mind‑blowing speed and creativity.</p>
     </section>
 
-    <!-- ------------ TOOL CARDS ------------ -->
-    <main id="top-tools" class="tools">
-      <!-- Card #1 -->
-      <article class="card">
-        <h3>#1 – Layer Flow (Script)</h3>
-        <p>The ultimate workflow booster: automate layer duplication, adjustment‑layer fitting, and more at lightning speed.</p>
-        <a href="https://www.layerflow.shop" target="_blank" rel="noopener">Learn More</a>
-      </article>
+    <!-- ===== Content Area ===== -->
+    <main class="content-bg" id="tools">
+      <h2 style="text-align:center; margin-bottom:2.5rem; font-size:2rem;">🔥 Editor‑Approved Scripts & Plugins</h2>
+      <div class="tools">
+        <!-- Example Card 1 -->
+        <article class="card">
+          <h3>Layer Flow</h3>
+          <p>The fastest way to duplicate, align, and organize layers for complex comps. Perfect for large‑scale motion workflows.</p>
+          <a href="https://www.layerflow.shop" class="cta" target="_blank" rel="noopener">Learn More</a>
+        </article>
 
-      <!-- Card #2 -->
-      <article class="card">
-        <h3>#2 – BeatEdit 3 (Script)</h3>
-        <p>Synchronize edits and animations perfectly to music beats in seconds.</p>
-        <a href="https://aescripts.com/beatedit-for-after-effects/" target="_blank" rel="noopener">Learn More</a>
-      </article>
+        <!-- Example Card 2 -->
+        <article class="card">
+          <h3>QuickEase Pro</h3>
+          <p>Sophisticated easing presets at your fingertips—animate like a pro without fiddling in the graph editor.</p>
+          <a href="https://aescripts.com/quickease-pro" class="cta" target="_blank" rel="noopener">Learn More</a>
+        </article>
 
-      <!-- Card #3 -->
-      <article class="card">
-        <h3>#3 – EaseCopy 2 (Script)</h3>
-        <p>Copy, paste & share keyframe easing like a pro—no more manual tweaks.</p>
-        <a href="https://aescripts.com/easecopy/" target="_blank" rel="noopener">Learn More</a>
-      </article>
+        <!-- Example Card 3 -->
+        <article class="card">
+          <h3>MotionTools 3</h3>
+          <p>A Swiss‑army toolset of 40+ functions: anchor‑point magic, smart parents, stagger wizard & more.</p>
+          <a href="https://motionland.io/motiontools3" class="cta" target="_blank" rel="noopener">Learn More</a>
+        </article>
 
-      <!-- Card #4 -->
-      <article class="card">
-        <h3>#4 – Flow 2 (Script)</h3>
-        <p>Design custom motion curves visually and apply them with a click.</p>
-        <a href="https://aescripts.com/flow/" target="_blank" rel="noopener">Learn More</a>
-      </article>
+        <!-- Example Card 4 -->
+        <article class="card">
+          <h3>Flow 2</h3>
+          <p>Create beautiful motion curves with an intuitive editor—sync them across projects instantly.</p>
+          <a href="https://aescripts.com/flow" class="cta" target="_blank" rel="noopener">Learn More</a>
+        </article>
 
-      <!-- Card #5 -->
-      <article class="card">
-        <h3>#5 – Motion 3 (Script)</h3>
-        <p>A swiss‑army toolkit: anchors, bounce, squash & stretch, null gridding, and more.</p>
-        <a href="https://aescripts.com/m
+        <!-- Example Card 5 -->
+        <article class="card">
+          <h3>Overlap</h3>
+          <p>Add dynamic follow‑through & overlapping animation in one click. Essential for character rigs.</p>
+          <a href="https://aescripts.com/overlap" class="cta" target="_blank" rel="noopener">Learn More</a>
+        </article>
+
+        <!-- Example Card 6 -->
+        <article class="card">
+          <h3>BeatEdit 3</h3>
+          <p>Automatically sync your edits and effects to the music beat—now 3× faster with advanced detection.</p>
+          <a href="https://aescripts.com/beatedit/" class="cta" target="_blank" rel="noopener">Learn More</a>
+        </article>
+      </div>
+    </main>
+
+    <!-- ===== About ===== -->
+    <details class="about" id="about">
+      <summary>👋 About AE Script Reviews</summary>
+      <p style="margin-top:1rem; max-width:65ch;">
+        We’re a tight‑knit collective of motion designers and technical artists obsessed with workflow efficiency. Every month we run an exhaustive, hands‑on testing suite against new <strong>After Effects scripts and plugins</strong>: stress‑testing speed, stability, and creative flexibility across real‑world projects. Only the true standouts make it onto this site—saving you countless hours of trial‑and‑error.
+      </p>
+      <p style="margin-top:1rem;">Questions or tool suggestions? Reach out at <a href="mailto:aescriptreviews2025@gmail.com">aescriptreviews2025@gmail.com</a>.</p>
+    </details>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      © 2025 AE Script Reviews — Built with ❤️ for the After Effects community.
+    </footer>
+  </body>
+</html>

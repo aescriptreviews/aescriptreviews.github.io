@@ -3,268 +3,206 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>AE Script Reviews 2025 – Best After Effects Scripts & Plugins</title>
     <meta name="description" content="Hands‑on reviews of the most powerful After Effects scripts and plugins. We test hundreds so you don’t have to—discover the very best tools for 2025." />
 
-    <!--  Neon‑Midnight Theme -->
+    <!-- 🖌️ Global Styles (keeps vibrant theme & banner/header improvements) -->
     <style>
       :root {
-        --midnight: #0a0e25;
-        --hot-pink: #ff3cac;
-        --electric-cyan: #30c9ff;
-        --sun-yellow: #f8e71c;
+        --midnight: #0b0e1a;
+        --electric-cyan: #0ff;
+        --hot-pink: #ff2aad;
+        --sun-yellow: #ffc52e;
         --card-bg: rgba(255, 255, 255, 0.04);
         --card-border: rgba(255, 255, 255, 0.08);
-        --glass: rgba(10, 14, 37, 0.55);
+        --blur: blur(14px);
       }
+
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        font-family: "Inter", system-ui, sans-serif;
+        color: #f8f8f8;
       }
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 6rem;
-        background: var(--midnight);
-        color: #ffffff;
-      }
+
       body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+        background: var(--midnight);
+        line-height: 1.5;
       }
-      /* ---------- Header ---------- */
+
+      /* Sticky glass header */
       header {
         position: sticky;
         top: 0;
-        z-index: 1000;
-        backdrop-filter: blur(12px) saturate(160%);
-        background: var(--glass);
-        border-bottom: 2px solid transparent;
-        border-image: linear-gradient(to right, var(--hot-pink), var(--electric-cyan)) 1;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-      }
-      .nav {
-        max-width: 1200px;
-        margin: 0 auto;
+        backdrop-filter: var(--blur);
+        background: rgba(11, 14, 26, 0.6);
+        border-bottom: 1px solid var(--card-border);
         padding: 1rem 2rem;
         display: flex;
+        gap: 2rem;
         align-items: center;
-        justify-content: space-between;
+        z-index: 100;
       }
-      .nav a {
-        color: #fff;
+
+      header a {
         text-decoration: none;
         font-weight: 600;
+        transition: color 0.2s;
       }
-      .nav a:hover {
-        color: var(--electric-cyan);
+
+      header a:hover {
+        color: var(--hot-pink);
       }
-      /* ---------- Hero Banner ---------- */
+
+      /* Hero banner */
       .hero {
-        padding: 6rem 2rem 8rem;
-        background: radial-gradient(circle at 20% 30%, var(--hot-pink), transparent 60%),
-          radial-gradient(circle at 80% 40%, var(--electric-cyan), transparent 60%),
-          radial-gradient(circle at 50% 80%, var(--sun-yellow), transparent 70%),
-          repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0 10px, transparent 10px 20px),
-          var(--midnight);
+        padding: 6rem 2rem 4rem;
         text-align: center;
+        background: radial-gradient(circle at 20% 30%, var(--hot-pink) 0%, transparent 60%),
+          radial-gradient(circle at 80% 70%, var(--electric-cyan) 0%, transparent 60%),
+          radial-gradient(circle at 50% 110%, var(--sun-yellow) 0%, transparent 70%),
+          var(--midnight);
+        background-size: cover;
+        background-repeat: no-repeat;
       }
+
       .hero h1 {
-        font-size: clamp(2.5rem, 6vw, 4rem);
-        margin-bottom: 1rem;
-        background: linear-gradient(90deg, var(--hot-pink), var(--electric-cyan));
+        font-size: 3rem;
+        font-weight: 800;
+        background: linear-gradient(45deg, var(--electric-cyan), var(--hot-pink));
         -webkit-background-clip: text;
-        color: transparent;
+        -webkit-text-fill-color: transparent;
       }
-      .hero p {
-        font-size: 1.125rem;
-        max-width: 680px;
-        margin: 0 auto 2rem;
-        opacity: 0.9;
-      }
-      .cta-btn {
-        padding: 0.75rem 2rem;
-        border: none;
-        border-radius: 999px;
-        background: linear-gradient(90deg, var(--electric-cyan), var(--hot-pink));
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: opacity 0.25s ease;
-      }
-      .cta-btn:hover {
-        opacity: 0.85;
-      }
-      /* ---------- Tool Grid ---------- */
-      section#tools {
-        padding: 4rem 2rem 6rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .tool-grid {
+
+      .hero p { margin-top: 1rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+      /* Grid */
+      .tools {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 4rem 2rem 6rem;
       }
-      .tool-card {
+
+      .card {
         background: var(--card-bg);
         border: 1px solid var(--card-border);
-        padding: 1.5rem;
         border-radius: 1rem;
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        padding: 2rem;
+        backdrop-filter: var(--blur);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.5rem;
       }
-      .tool-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
-      }
-      .tool-title {
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-      }
-      .tool-desc {
-        font-size: 0.95rem;
-        line-height: 1.45;
-        opacity: 0.85;
-        margin-bottom: 1.25rem;
-      }
-      .tool-link {
+
+      .card h3 { font-size: 1.25rem; }
+
+      .card small { opacity: 0.7; }
+
+      .btn {
         display: inline-block;
-        padding: 0.5rem 1.25rem;
-        border-radius: 999px;
-        background: linear-gradient(90deg, var(--hot-pink), var(--electric-cyan));
-        color: #fff;
-        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background: var(--electric-cyan);
+        color: #000;
         font-weight: 600;
         text-decoration: none;
-        transition: opacity 0.25s ease;
-      }
-      .tool-link:hover {
-        opacity: 0.85;
-      }
-      /* ---------- Footer ---------- */
-      footer {
         text-align: center;
-        padding: 3rem 2rem 2rem;
-        font-size: 0.875rem;
-        opacity: 0.65;
+        transition: transform 0.15s, background 0.15s;
       }
+
+      .btn:hover { transform: translateY(-2px); background: var(--hot-pink); color: #fff; }
+
+      /* Footer */
+      footer {
+        padding: 2rem;
+        text-align: center;
+        opacity: 0.6;
+      }
+
+      /* Scroll offset for smooth anchor scroll */
+      html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+      .tools { scroll-margin-top: 6rem; }
     </style>
   </head>
   <body>
+    <!-- Header -->
     <header>
-      <nav class="nav">
-        <a href="#top">AE Script Reviews 2025</a>
-        <a href="#tools">Scripts & Plugins</a>
-      </nav>
+      <a href="#top" style="font-size: 1.3rem;">AE Script Reviews</a>
+      <a href="#tools">Scripts & Plugins</a>
     </header>
 
-    <main id="top">
-      <section class="hero">
-        <h1>Discover the Best After Effects Scripts & Plugins</h1>
-        <p>
-          We benchmark every tool so you can create faster. Browse our curated
-          picks—fully tested, battle‑proven, and ready for your next project.
-        </p>
-        <a href="#tools" class="cta-btn">Browse Top Tools</a>
-      </section>
+    <!-- Hero Banner -->
+    <section id="top" class="hero">
+      <h1>Curated AE Tools 2025</h1>
+      <p>We rigorously test every script & plugin so you can focus on creating—here are our <strong>top 8</strong> picks this year.</p>
+    </section>
 
-      <section id="tools">
-        <div class="tool-grid">
-          <!-- Layer Flow (user's own product) -->
-          <article class="tool-card">
-            <h3 class="tool-title">Layer Flow</h3>
-            <p class="tool-desc">Instantly generate perfectly timed adjustment layers & duplicates—made by editors, for editors.</p>
-            <a class="tool-link" href="https://www.layerflow.shop" target="_blank" rel="noopener">Learn More</a>
-          </article>
+    <!-- Tools Grid -->
+    <section id="tools" class="tools">
+      <!-- 1. Layer Flow -->
+      <article class="card">
+        <h3>1. Layer Flow (your own)</h3>
+        <small>Dynamic layer duplication & workflow streamlining.</small>
+        <a class="btn" href="https://www.layerflow.shop" target="_blank" rel="noopener">Learn More</a>
+      </article>
 
-          <!-- Flow -->
-          <article class="tool-card">
-            <h3 class="tool-title">Flow</h3>
-            <p class="tool-desc">Beautiful curve editor that brings intuitive easing to After Effects in one click.</p>
-            <a class="tool-link" href="https://aescripts.com/flow/" target="_blank" rel="noopener">Learn More</a>
-          </article>
+      <!-- 2. Flow – Easing graph editor -->
+      <article class="card">
+        <h3>2. Flow – Easing graph editor</h3>
+        <small>Refine motion curves with an intuitive interface. <em>aescripts</em></small>
+        <a class="btn" href="https://aescripts.com/flow/" target="_blank" rel="noopener">Learn More</a>
+      </article>
 
-          <!-- FX Console -->
-          <article class="tool-card">
-            <h3 class="tool-title">FX Console</h3>
-            <p class="tool-desc">Video Copilot’s free power launcher—apply effects, take snapshots & speed up your workflow.</p>
-            <a class="tool-link" href="https://www.videocopilot.net/tutorials/fx_console_plugin/" target="_blank" rel="noopener">Learn More</a>
-          </article>
+      <!-- 3. Motion Bro – Preset engine -->
+      <article class="card">
+        <h3>3. Motion Bro – Preset engine</h3>
+        <small>Drag‑and‑drop transitions & assets. <em>Motion Bro</em></small>
+        <a class="btn" href="https://motionbro.com/" target="_blank" rel="noopener">Learn More</a>
+      </article>
 
-          <!-- Deep Glow -->
-          <article class="tool-card">
-            <h3 class="tool-title">Deep Glow 2</h3>
-            <p class="tool-desc">Industry‑favorite glow with physical falloff, lens dirt & HDR tonemapping for photoreal results.</p>
-            <a class="tool-link" href="https://aescripts.com/deep-glow/" target="_blank" rel="noopener">Learn More</a>
-          </article>
+      <!-- 4. FX Console – Workflow launcher -->
+      <article class="card">
+        <h3>4. FX Console – Workflow launcher</h3>
+        <small>Instant effect search & snapshot manager. <em>videocopilot.net</em></small>
+        <a class="btn" href="https://www.videocopilot.net/blog/2017/10/fx-console-plug-in/" target="_blank" rel="noopener">Learn More</a>
+      </article>
 
-          <!-- Motion Bro 4 -->
-          <article class="tool-card">
-            <h3 class="tool-title">Motion Bro 4</h3>
-            <p class="tool-desc">Drag‑and‑drop transitions, sound FX & presets—all inside a polished extension panel.</p>
-            <a class="tool-link" href="https://motionbro.net/" target="_blank" rel="noopener">Learn More</a>
-          </article>
+      <!-- 5. Deep Glow 2 – Physically‑accurate glow -->
+      <article class="card">
+        <h3>5. Deep Glow 2 – Physically‑accurate glow</h3>
+        <small>Beautiful inverse‑square falloff for realistic glows. <em>aescripts</em></small>
+        <a class="btn" href="https://aescripts.com/deep-glow/" target="_blank" rel="noopener">Learn More</a>
+      </article>
 
-          <!-- Animation Composer 3 -->
-          <article class="tool-card">
-            <h3 class="tool-title">Animation Composer 3</h3>
-            <p class="tool-desc">900K+ users rely on Mister Horse’s free plugin for one‑click motion presets & sound design.</p>
-            <a class="tool-link" href="https://misterhorse.com/animation-composer" target="_blank" rel="noopener">Learn More</a>
-          </article>
+      <!-- 6. Animation Composer – Presets suite -->
+      <article class="card">
+        <h3>6. Animation Composer – Presets suite</h3>
+        <small>1‑click transitions, behaviors, sounds & more. <em>misterhorse.com</em></small>
+        <a class="btn" href="https://misterhorse.com/animation-composer" target="_blank" rel="noopener">Learn More</a>
+      </article>
 
-          <!-- DUIK Bassel 2 -->
-          <article class="tool-card">
-            <h3 class="tool-title">DUIK Bassel 2</h3>
-            <p class="tool-desc">Open‑source rigging & animation powerhouse—IK, FK, constraints and more for character artists.</p>
-            <a class="tool-link" href="https://rainboxlab.org/tools/duik/" target="_blank" rel="noopener">Learn More</a>
-          </article>
+      <!-- 7. DUIK Bassel – Rigging & animation toolkit -->
+      <article class="card">
+        <h3>7. DUIK Bassel – Rigging & animation toolkit</h3>
+        <small>Advanced character rigging & IK. <em>forum.rainboxlab.org</em></small>
+        <a class="btn" href="https://duikbassel.org/" target="_blank" rel="noopener">Learn More</a>
+      </article>
 
-          <!-- Stardust -->
-          <article class="tool-card">
-            <h3 class="tool-title">Stardust</h3>
-            <p class="tool-desc">Modular 3D particle system with a node‑based UI—create nebulae, typography & VFX in‑comp.</p>
-            <a class="tool-link" href="https://superluminal.tv/" target="_blank" rel="noopener">Learn More</a>
-          </article>
+      <!-- 8. Stardust -->
+      <article class="card">
+        <h3>8. Stardust</h3>
+        <small>Modular 3‑D particle & VFX system.</small>
+        <a class="btn" href="https://www.superluminal.tv/stardust" target="_blank" rel="noopener">Learn More</a>
+      </article>
+    </section>
 
-          <!-- AEJuice Pack Manager 4 -->
-          <article class="tool-card">
-            <h3 class="tool-title">AEJuice Pack Manager 4</h3>
-            <p class="tool-desc">Preview, manage & import thousands of AEJuice presets, transitions & sound effects.</p>
-            <a class="tool-link" href="https://aejuice.com/product/pack-manager" target="_blank" rel="noopener">Learn More</a>
-          </article>
-
-          <!-- KBar 3 (Toolbar) -->
-          <article class="tool-card">
-            <h3 class="tool-title">KBar 3</h3>
-            <p class="tool-desc">Build custom toolbars to launch scripts, effects & expressions—your shortcuts, your way.</p>
-            <a class="tool-link" href="https://aescripts.com/kbar/" target="_blank" rel="noopener">Learn More</a>
-          </article>
-
-          <!-- EaseCopy -->
-          <article class="tool-card">
-            <h3 class="tool-title">EaseCopy</h3>
-            <p class="tool-desc">Copy & paste keyframe velocity without touching values—perfect easing every time.</p>
-            <a class="tool-link" href="https://aescripts.com/easecopy/" target="_blank" rel="noopener">Learn More</a>
-          </article>
-
-          <!-- Overlord -->
-          <article class="tool-card">
-            <h3 class="tool-title">Overlord</h3>
-            <p class="tool-desc">Seamlessly transfer shapes between Illustrator, Figma & After Effects—no more exporting.</p>
-            <a class="tool-link" href="https://battleaxe.co/overlord" target="_blank" rel="noopener">Learn More</a>
-          </article>
-        </div>
-      </section>
-    </main>
-
+    <!-- Footer -->
     <footer>
-      © 2025 AE Script Reviews — All trademarks are property of their respective owners.  
-      Contact: <a href="mailto:aescriptreviews2025@gmail.com" style="color: var(--electric-cyan); text-decoration: none;">aescriptreviews2025@gmail.com</a>
+      <p>&copy; 2025 AE Script Reviews – Contact: <a href="mailto:aescriptreviews2025@gmail.com">aescriptreviews2025@gmail.com</a></p>
     </footer>
   </body>
 </html>

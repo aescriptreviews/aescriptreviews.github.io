@@ -25,6 +25,8 @@
 
       html {
         scroll-behavior: smooth;
+        /* Ensure anchor jumps leave space for sticky header */
+        scroll-padding-top: 6rem; /* ≈96 px */
       }
 
       body {
@@ -102,6 +104,8 @@
         padding: 0 1.5rem 5rem;
         max-width: 1440px;
         margin: 0 auto;
+        /* Offset for sticky header when navigated via anchor */
+        scroll-margin-top: 6rem;
       }
 
       .card {
@@ -176,6 +180,7 @@
       #about {
         padding: 4rem 2rem 6rem;
         background: linear-gradient(180deg, var(--midnight) 0%, #0f0f2a 100%);
+        scroll-margin-top: 6rem; /* Same offset for anchor */
       }
 
       #about h2 {
@@ -259,27 +264,4 @@
       <article class="card">
         <h3>#5 – Motion 3 (Script)</h3>
         <p>A swiss‑army toolkit: anchors, bounce, squash & stretch, null gridding, and more.</p>
-        <a href="https://aescripts.com/motion-3/" target="_blank" rel="noopener">Learn More</a>
-      </article>
-
-      <!-- Card #6 -->
-      <article class="card">
-        <h3>#6 – AutoFill (Plugin)</h3>
-        <p>Magically fills layers with fluid animations that follow any path or logo.</p>
-        <a href="https://aescripts.com/autofill/" target="_blank" rel="noopener">Learn More</a>
-      </article>
-    </main>
-
-    <!-- ------------ ABOUT SECTION ------------ -->
-    <section id="about">
-      <h2>About Us</h2>
-      <p><strong>AE Script Reviews</strong> is an independent collective of motion designers and technical artists dedicated to uncovering the most game‑changing tools in the After Effects ecosystem. Every year we rigorously test <em>hundreds</em> of scripts and plugins—evaluating performance, usability, support, and real‑world production value—so you don’t have to.</p>
-      <p>Only the stand‑out winners earn a spot on our site. Have a tool you’d like us to review? Got feedback on one of our picks? Reach us anytime at <a href="mailto:aescriptreviews2025@gmail.com">aescriptreviews2025@gmail.com</a>.</p>
-    </section>
-
-    <!-- ------------ FOOTER ------------ -->
-    <footer>
-      &copy; 2025 AE Script Reviews. Built with 💜 & ✨ for the motion‑graphics community.
-    </footer>
-  </body>
-</html>
+        <a href="https

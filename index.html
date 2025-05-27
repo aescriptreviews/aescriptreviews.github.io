@@ -3,206 +3,248 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>AE Script Reviews 2025 – Best After Effects Scripts & Plugins</title>
     <meta name="description" content="Hands‑on reviews of the most powerful After Effects scripts and plugins. We test hundreds so you don’t have to—discover the very best tools for 2025." />
 
-    <!-- 🖌️ Global Styles (keeps vibrant theme & banner/header improvements) -->
+    <!-- 🔥 Vibrant Theme → midnight + neon accents -->
     <style>
       :root {
-        --midnight: #0b0e1a;
-        --electric-cyan: #0ff;
-        --hot-pink: #ff2aad;
-        --sun-yellow: #ffc52e;
-        --card-bg: rgba(255, 255, 255, 0.04);
-        --card-border: rgba(255, 255, 255, 0.08);
-        --blur: blur(14px);
+        --midnight: #0e0e16;
+        --card-bg: #1a1a26;
+        --text-main: #ffffffd9;
+        --hot-pink: #ff38b0;
+        --electric-cyan: #3af5ff;
+        --glow-spread: 12px;
       }
 
       * {
         box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: "Inter", system-ui, sans-serif;
-        color: #f8f8f8;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
       }
 
       body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
         background: var(--midnight);
-        line-height: 1.5;
+        color: var(--text-main);
       }
 
-      /* Sticky glass header */
+      /* Sticky Frosted Header */
       header {
         position: sticky;
         top: 0;
-        backdrop-filter: var(--blur);
-        background: rgba(11, 14, 26, 0.6);
-        border-bottom: 1px solid var(--card-border);
-        padding: 1rem 2rem;
+        z-index: 1000;
+        backdrop-filter: blur(12px) saturate(160%);
+        background: rgba(14, 14, 22, 0.6);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(90deg, var(--electric-cyan), var(--hot-pink)) 1;
+        animation: slideDown 0.6s ease 0s 1 both;
+      }
+      @keyframes slideDown {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
+      }
+
+      .container {
+        width: min(1200px, 90%);
+        margin-inline: auto;
+        padding: 1rem 0;
         display: flex;
-        gap: 2rem;
         align-items: center;
-        z-index: 100;
+        justify-content: space-between;
       }
 
-      header a {
+      nav a {
+        color: var(--text-main);
         text-decoration: none;
+        margin-left: 1rem;
         font-weight: 600;
-        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: var(--electric-cyan);
       }
 
-      header a:hover {
-        color: var(--hot-pink);
-      }
-
-      /* Hero banner */
+      /* Hero Banner */
       .hero {
-        padding: 6rem 2rem 4rem;
+        padding: 6rem 1rem 4rem;
         text-align: center;
-        background: radial-gradient(circle at 20% 30%, var(--hot-pink) 0%, transparent 60%),
-          radial-gradient(circle at 80% 70%, var(--electric-cyan) 0%, transparent 60%),
-          radial-gradient(circle at 50% 110%, var(--sun-yellow) 0%, transparent 70%),
-          var(--midnight);
-        background-size: cover;
-        background-repeat: no-repeat;
+        background: radial-gradient(circle at top left, var(--hot-pink), transparent 60%),
+                    radial-gradient(circle at bottom right, var(--electric-cyan), transparent 60%),
+                    var(--midnight);
+        background-blend-mode: screen;
+        position: relative;
       }
-
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0 4px, transparent 4px 8px);
+        pointer-events: none;
+      }
       .hero h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        background: linear-gradient(45deg, var(--electric-cyan), var(--hot-pink));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        margin: 0;
+        color: #fff;
+      }
+      .hero p {
+        max-width: 55ch;
+        margin-inline: auto;
+        font-size: 1.125rem;
+        opacity: 0.85;
       }
 
-      .hero p { margin-top: 1rem; max-width: 700px; margin-left: auto; margin-right: auto; }
-
-      /* Grid */
+      /* Tools Grid */
       .tools {
         display: grid;
-        gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        padding: 4rem 2rem 6rem;
-      }
-
-      .card {
-        background: var(--card-bg);
-        border: 1px solid var(--card-border);
-        border-radius: 1rem;
-        padding: 2rem;
-        backdrop-filter: var(--blur);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         gap: 1.5rem;
+        width: min(1200px, 90%);
+        margin: 2rem auto 4rem;
       }
 
-      .card h3 { font-size: 1.25rem; }
+      .tool-card {
+        background: var(--card-bg);
+        border-radius: 1rem;
+        padding: 2rem 1.75rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+        border: 1px solid rgba(255,255,255,0.06);
+      }
+      .tool-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 var(--glow-spread) var(--electric-cyan), 0 0 calc(var(--glow-spread)*1.6) var(--hot-pink);
+        border-color: var(--electric-cyan);
+      }
 
-      .card small { opacity: 0.7; }
-
-      .btn {
+      .tool-card h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+        color: #fff;
+      }
+      .tool-card p {
+        margin: 0 0 1.25rem;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        opacity: 0.9;
+      }
+      .tool-card a.btn {
         display: inline-block;
+        background: var(--electric-cyan);
+        color: #001014;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
-        background: var(--electric-cyan);
-        color: #000;
         font-weight: 600;
         text-decoration: none;
-        text-align: center;
-        transition: transform 0.15s, background 0.15s;
       }
-
-      .btn:hover { transform: translateY(-2px); background: var(--hot-pink); color: #fff; }
+      .tool-card a.btn:hover {
+        background: var(--hot-pink);
+        color: #001014;
+      }
 
       /* Footer */
       footer {
-        padding: 2rem;
+        padding: 3rem 1rem;
         text-align: center;
-        opacity: 0.6;
+        font-size: 0.9rem;
+        background: #111119;
+        color: #ffffffa6;
       }
-
-      /* Scroll offset for smooth anchor scroll */
-      html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
-      .tools { scroll-margin-top: 6rem; }
+      footer a { color: var(--electric-cyan); }
     </style>
   </head>
   <body>
-    <!-- Header -->
     <header>
-      <a href="#top" style="font-size: 1.3rem;">AE Script Reviews</a>
-      <a href="#tools">Scripts & Plugins</a>
+      <div class="container">
+        <strong>AE Script Reviews 2025</strong>
+        <nav>
+          <a href="#tools">Scripts & Plugins</a>
+          <a href="#about">About</a>
+          <a href="mailto:aescriptreviews2025@gmail.com">Contact</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section id="top" class="hero">
-      <h1>Curated AE Tools 2025</h1>
-      <p>We rigorously test every script & plugin so you can focus on creating—here are our <strong>top 8</strong> picks this year.</p>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <h1>Discover the Best After Effects Tools</h1>
+      <p>We rigorously test hundreds of scripts & plugins so you can focus on creating. Here are our top picks for 2025.</p>
     </section>
 
     <!-- Tools Grid -->
-    <section id="tools" class="tools">
-      <!-- 1. Layer Flow -->
-      <article class="card">
-        <h3>1. Layer Flow (your own)</h3>
-        <small>Dynamic layer duplication & workflow streamlining.</small>
+    <section class="tools" id="tools">
+      <!-- 1 | Layer Flow – no number shown -->
+      <article class="tool-card">
+        <h3>Layer Flow</h3>
+        <p>Automated layer duplication & work‑area matching for effortless color grading, effects, and rhythmic edits.</p>
         <a class="btn" href="https://www.layerflow.shop" target="_blank" rel="noopener">Learn More</a>
       </article>
 
-      <!-- 2. Flow – Easing graph editor -->
-      <article class="card">
-        <h3>2. Flow – Easing graph editor</h3>
-        <small>Refine motion curves with an intuitive interface. <em>aescripts</em></small>
+      <!-- 2 · Flow -->
+      <article class="tool-card">
+        <h3>2 · Flow – Easing graph editor</h3>
+        <p>Intuitive Bézier curve presets and instant easing copy‑paste. Perfect timing every time.</p>
         <a class="btn" href="https://aescripts.com/flow/" target="_blank" rel="noopener">Learn More</a>
       </article>
 
-      <!-- 3. Motion Bro – Preset engine -->
-      <article class="card">
-        <h3>3. Motion Bro – Preset engine</h3>
-        <small>Drag‑and‑drop transitions & assets. <em>Motion Bro</em></small>
-        <a class="btn" href="https://motionbro.com/" target="_blank" rel="noopener">Learn More</a>
+      <!-- 3 · Motion Bro -->
+      <article class="tool-card">
+        <h3>3 · Motion Bro – Preset engine</h3>
+        <p>Thousands of transitions, effects, and titles at your fingertips inside one streamlined panel.</p>
+        <a class="btn" href="https://motionbro.net" target="_blank" rel="noopener">Learn More</a>
       </article>
 
-      <!-- 4. FX Console – Workflow launcher -->
-      <article class="card">
-        <h3>4. FX Console – Workflow launcher</h3>
-        <small>Instant effect search & snapshot manager. <em>videocopilot.net</em></small>
-        <a class="btn" href="https://www.videocopilot.net/blog/2017/10/fx-console-plug-in/" target="_blank" rel="noopener">Learn More</a>
+      <!-- 4 · FX Console -->
+      <article class="tool-card">
+        <h3>4 · FX Console – Workflow launcher</h3>
+        <p>Lightning‑fast effect search, presets, and screenshots—an essential freebie from Video Copilot.</p>
+        <a class="btn" href="https://www.videocopilot.net/blog/2017/10/new-fx-console-plug-in/" target="_blank" rel="noopener">Learn More</a>
       </article>
 
-      <!-- 5. Deep Glow 2 – Physically‑accurate glow -->
-      <article class="card">
-        <h3>5. Deep Glow 2 – Physically‑accurate glow</h3>
-        <small>Beautiful inverse‑square falloff for realistic glows. <em>aescripts</em></small>
+      <!-- 5 · Deep Glow 2 -->
+      <article class="tool-card">
+        <h3>5 · Deep Glow 2 – Physically‑accurate glow</h3>
+        <p>HDR‑aware, GPU‑accelerated glow with tint, gamma, and radius controls for photoreal luminance.</p>
         <a class="btn" href="https://aescripts.com/deep-glow/" target="_blank" rel="noopener">Learn More</a>
       </article>
 
-      <!-- 6. Animation Composer – Presets suite -->
-      <article class="card">
-        <h3>6. Animation Composer – Presets suite</h3>
-        <small>1‑click transitions, behaviors, sounds & more. <em>misterhorse.com</em></small>
+      <!-- 6 · Animation Composer -->
+      <article class="tool-card">
+        <h3>6 · Animation Composer – Presets suite</h3>
+        <p>Create complex motion in seconds with Mister Horse’s massive library of transitions, sounds, and effects.</p>
         <a class="btn" href="https://misterhorse.com/animation-composer" target="_blank" rel="noopener">Learn More</a>
       </article>
 
-      <!-- 7. DUIK Bassel – Rigging & animation toolkit -->
-      <article class="card">
-        <h3>7. DUIK Bassel – Rigging & animation toolkit</h3>
-        <small>Advanced character rigging & IK. <em>forum.rainboxlab.org</em></small>
-        <a class="btn" href="https://duikbassel.org/" target="_blank" rel="noopener">Learn More</a>
+      <!-- 7 · DUIK Bassel -->
+      <article class="tool-card">
+        <h3>7 · DUIK Bassel – Rigging & animation toolkit</h3>
+        <p>Professional‑grade character rigging, IK, and automation tools—open source and donation‑ware.</p>
+        <a class="btn" href="https://forum.rainboxlab.org/" target="_blank" rel="noopener">Learn More</a>
       </article>
 
-      <!-- 8. Stardust -->
-      <article class="card">
-        <h3>8. Stardust</h3>
-        <small>Modular 3‑D particle & VFX system.</small>
-        <a class="btn" href="https://www.superluminal.tv/stardust" target="_blank" rel="noopener">Learn More</a>
+      <!-- 8 · Stardust -->
+      <article class="tool-card">
+        <h3>8 · Stardust</h3>
+        <p>Advanced 3‑D particle system with node‑based controls for mesmerizing motion‑graphics effects.</p>
+        <a class="btn" href="https://www.superluminal.tv/stardust/" target="_blank" rel="noopener">Learn More</a>
       </article>
     </section>
 
-    <!-- Footer -->
+    <!-- About Section -->
+    <section id="about" class="container" style="margin-bottom:4rem;">
+      <h2>About Us</h2>
+      <p>AE Script Reviews is a small, independent team of professional motion designers who love tinkering with new tools. We install, stress‑test, and benchmark every After Effects script & plugin we can get our hands on—then share honest, in‑depth reviews so you can skip the guesswork.</p>
+      <p>Have a tool you’d like us to test? <a href="mailto:aescriptreviews2025@gmail.com">Email us</a>.</p>
+    </section>
+
     <footer>
-      <p>&copy; 2025 AE Script Reviews – Contact: <a href="mailto:aescriptreviews2025@gmail.com">aescriptreviews2025@gmail.com</a></p>
+      © 2025 AE Script Reviews. Built with ❤️ in Chicago.<br />
+      Not affiliated with Adobe® After Effects®.
     </footer>
   </body>
 </html>

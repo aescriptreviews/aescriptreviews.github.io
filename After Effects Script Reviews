@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE Script Reviews 2025 - Professional After Effects Scripts & Plugins</title>
+    <meta name="description" content="Expert reviews of premium After Effects scripts and plugins for 2025. Discover the tools that transform your creative workflow.">
+    <meta name="keywords" content="after effects scripts, ae plugins, best ae scripts 2025, after effects tools, motion graphics scripts, layer flow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AE Script Reviews 2025 - Premium After Effects Scripts">
+    <meta property="og:description" content="Curated collection of the finest After Effects scripts and plugins for professionals">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://aescriptreviews.com/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0071e3;
+            --primary-dark: #0051a2;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --text-light: #515154;
+            --bg-primary: #fbfbfd;
+            --bg-secondary: #f5f5f7;
+            --bg-card: #ffffff;
+            --border-light: rgba(0, 0, 0, 0.08);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.16);
+            --gradient-hero: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
+            --gradient-premium: linear-gradient(135deg, #0071e3 0%, #00c6fb 100%);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 32px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(251, 251, 253, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            box-shadow: var(--shadow-sm);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo::before {
+            content: "⚡";
+            font-size: 24px;
+            filter: saturate(0) brightness(0.5);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: var(--primary);
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-hero);
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 113, 227, 0.05) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .hero-badge .new {
+            background: var(--gradient-premium);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.4;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 60px;
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        /* Editor's Choice Section */
+        .editors-choice {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+        
+        .section-label {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .section-label span {
+            display: inline-block;
+            background: var(--gradient-premium);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .choice-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        .choice-content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .choice-rating {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .stars {
+            display: flex;
+            gap: 4px;
+            font-size: 20px;
+            color: #FFD700;
+        }
+        
+        .rating-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .choice-content h2 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .choice-tagline {
+            font-size: 20px;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        
+        .choice-description {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+        
+        .choice-features {
+            list-style: none;
+            display: grid;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .choice-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            color: var(--text-light);
+        }
+        
+        .choice-features li::before {
+            content: "✓";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: rgba(0, 113, 227, 0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .price-wrapper {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        
+        .price-original {
+            font-size: 24px;
+            color: var(--text-secondary);
+            text-decoration: line-through;
+            font-weight: 400;
+        }
+        
+        .price-current {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .price-badge {
+            background: rgba(255, 69, 58, 0.1);
+            color: #FF453A;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .choice-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 16px rgba(0, 113, 227, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 113, 227, 0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-light);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--bg-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .choice-visual {
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .visual-card {
+            background: var(--gradient-hero);
+            border-radius: var(--radius-xl);
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.6s ease;
+        }
+        
+        .visual-card:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+        }
+        
+        .visual-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 113, 227, 0.1) 0%, transparent 70%);
+            animation: float 15s ease-in-out infinite reverse;
+        }
+        
+        .visual-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .visual-icon {
+            font-size: 80px;
+            margin-bottom: 24px;
+            filter: grayscale(0);
+        }
+        
+        .visual-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .visual-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 32px;
+        }
+        
+        .visual-stat {
+            text-align: center;
+        }
+        
+        .visual-stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        
+        .visual-stat-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        /* Trust Indicators */
+        .trust-section {
+            background: var(--bg-secondary);
+            padding: 60px 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .trust-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-item {
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .trust-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+            opacity: 0.8;
+        }
+        
+        .trust-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .trust-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        /* Reviews Grid */
+        .reviews-section {
+            padding: 100px 0;
+            background: var(--bg-primary);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .section-header h2 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .section-header p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+        
+        .review-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .review-card:nth-child(1) { animation-delay: 0s; }
+        .review-card:nth-child(2) { animation-delay: 0.1s; }
+        .review-card:nth-child(3) { animation-delay: 0.2s; }
+        .review-card:nth-child(4) { animation-delay: 0.3s; }
+        .review-card:nth-child(5) { animation-delay: 0.4s; }
+        .review-card:nth-child(6) { animation-delay: 0.5s; }
+        
+        .review-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-premium);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .review-card:hover::before {
+            transform: translateX(0);
+        }
+        
+        .review-rank {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .review-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+        
+        .review-rating {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .review-stars {
+            display: flex;
+            gap: 2px;
+            font-size: 16px;
+            color: #FFD700;
+        }
+        
+        .review-score {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .review-description {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        
+        .review-features {
+            list-style: none;
+            margin-bottom: 24px;
+            display: grid;
+            gap: 8px;
+        }
+        
+        .review-features li {
+            font-size: 14px;
+            color: var(--text-light);
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .review-features li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .review-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .review-price {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .review-btn {
+            padding: 10px 20px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .review-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 0;
+            background: var(--gradient-premium);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: float 25s ease-in-out infinite;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .cta-content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+        
+        .cta-content p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-btn {
+            background: white;
+            color: var(--primary);
+            padding: 18px 40px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            max-width: 300px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: scale(1.1);
+        }
+        
+        .footer-column h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-column a {
+            display: block;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .choice-wrapper {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .visual-card {
+                transform: none;
+            }
+            
+            .trust-wrapper {
+                gap: 40px;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 48px;
+            }
+            
+            .hero .subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-stats {
+                gap: 40px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+            
+            .choice-content h2 {
+                font-size: 40px;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .choice-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .visual-card {
+                padding: 40px 20px;
+            }
+            
+            .review-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav class="container">
+            <div class="logo">AE Script Reviews</div>
+            <ul class="nav-links">
+                <li><a href="#top-pick">Top Pick</a></li>
+                <li><a href="#reviews">All Reviews</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://layerflow.shop" class="nav-cta">Get Layer Flow</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="new">NEW</span>
+                    2025 Expert Reviews Released
+                </div>
+                <h1>Premium After Effects Scripts</h1>
+                <p class="subtitle">Curated collection of professional tools that transform your creative workflow</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">127</div>
+                        <div class="stat-label">Scripts Tested</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1,200+</div>
+                        <div class="stat-label">Hours of Testing</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Professionals Trust Us</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editor's Choice -->
+    <section class="editors-choice" id="top-pick">
+        <div class="container">
+            <div class="section-label">
+                <span>🏆 EDITOR'S CHOICE 2025</span>
+            </div>
+            
+            <div class="choice-wrapper">
+                <div class="choice-content">
+                    <div class="choice-rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="rating-text">5.0 Perfect Score • 847 Reviews</span>
+                    </div>
+                    
+                    <h2>Layer Flow</h2>
+                    <p class="choice-tagline">The Complete Workflow Revolution</p>
+                    
+                    <p class="choice-description">
+                        After extensive testing of 127 After Effects scripts, Layer Flow emerges as the definitive 
+                        workflow enhancement tool. It's not just another script—it's a comprehensive system that 
+                        fundamentally transforms how professionals work in After Effects.
+                    </p>
+                    
+                    <ul class="choice-features">
+                        <li>40+ Professional Functions in One Elegant Package</li>
+                        <li>Intelligent Layer Management with Smart Automation</li>
+                        <li>Advanced Copy/Paste System with Complete Property Preservation</li>
+                        <li>Professional Pre-Composition Suite with 3 Smart Modes</li>
+                        <li>Strategic Keyframe Automation for Efficient Animation</li>
+                    </ul>
+                    
+                    <div class="price-wrapper">
+                        <span class="price-original">$40</span>
+                        <span class="price-current">$10</span>
+                        <span class="price-badge">75% OFF</span>
+                    </div>
+                    
+                    <div class="choice-buttons">
+                        <a href="https://layerflow.shop" class="btn btn-primary">Get Layer Flow Now</a>
+                        <a href="#layer-flow-review" class="btn btn-secondary">Read Full Review</a>
+                    </div>
+                </div>
+                
+                <div class="choice-visual">
+                    <div class="visual-card">
+                        <div class="visual-content">
+                            <div class="visual-icon">⚡</div>
+                            <h3 class="visual-title">Layer Flow</h3>
+                            <div class="visual-stats">
+                                <div class="visual-stat">
+                                    <div class="visual-stat-number">40+</div>
+                                    <div class="visual-stat-label">Functions</div>
+                                </div>
+                                <div class="visual-stat">
+                                    <div class="visual-stat-number">9</div>
+                                    <div class="visual-stat-label">Categories</div>
+                                </div>
+                                <div class="visual-stat">
+                                    <div class="visual-stat-number">75%</div>
+                                    <div class="visual-stat-label">Time Saved</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-wrapper">
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <h3 class="trust-title">Secure Purchase</h3>
+                    <p class="trust-text">256-bit SSL encryption</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <h3 class="trust-title">Instant Delivery</h3>
+                    <p class="trust-text">Download immediately</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💯</div>
+                    <h3 class="trust-title">30-Day Guarantee</h3>
+                    <p class="trust-text">Full refund policy</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🎯</div>
+                    <h3 class="trust-title">Expert Support</h3>
+                    <p class="trust-text">Professional assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Complete Script Reviews</h2>
+                <p>In-depth analysis of the most impactful After Effects tools for professionals</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <!-- Layer Flow Review -->
+                <div class="review-card" id="layer-flow-review">
+                    <div class="review-rank">#1</div>
+                    <h3>Layer Flow</h3>
+                    <div class="review-rating">
+                        <div class="review-stars">★★★★★</div>
+                        <span class="review-score">5.0/5.0</span>
+                    </div>
+                    <p class="review-description">
+                        The most comprehensive workflow enhancement tool we've tested. Layer Flow revolutionizes 
+                        After Effects productivity with 40+ professional functions that eliminate tedious manual tasks.
+                    </p>
+                    <ul class="review-features">
+                        <li>Smart Work Area Tools with automatic timing</li>
+                        <li>Advanced Copy/Paste with complete property preservation</li>
+                        <li>Intelligent Pre-Composition with error prevention</li>
+                        <li>16 Creative Color Presets + Custom picker</li>
+                        <li>Professional Layer Creation Suite</li>
+                    </ul>
+                    <div class="review-footer">
+                        <span class="review-price">$10</span>
+                        <a href="https://layerflow.shop" class="review-btn">Get Now</a>
+                    </div>
+                </div>
+
+                <!-- Additional Reviews -->
+                <div class="review-card">
+                    <div class="review-rank">#2</div>
+                    <h3>Motion 3</h3>
+                    <div class="review-rating">
+                        <div class="review-stars">★★★★☆</div>
+                        <span class="review-score">4.5/5.0</span>
+                    </div>
+                    <p class="review-description">
+                        Powerful animation toolkit with advanced curve editing and motion path tools. 
+                        Excellent for character animation and complex motion graphics.
+                    </p>
+                    <ul class="review-features">
+                        <li>Advanced curve editor interface</li>
+                        <li>Motion path visualization</li>
+                        <li>Character animation presets</li>
+                        <li>Timeline enhancement tools</li>
+                    </ul>
+                    <div class="review-footer">
+                        <span class="review-price">$65</span>
+                        <a href="#" class="review-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rank">#3</div>
+                    <h3>Duik Bassel</h3>
+                    <div class="review-rating">
+                        <div class="review-stars">★★★★☆</div>
+                        <span class="review-score">4.3/5.0</span>
+                    </div>
+                    <p class="review-description">
+                        Industry-standard rigging and animation tool for character animation. 
+                        Free and open-source with professional-grade features.
+                    </p>
+                    <ul class="review-features">
+                        <li>Complete rigging system</li>
+                        <li>IK/FK switching</li>
+                        <li>Animation controllers</li>
+                        <li>Walk cycle automation</li>
+                    </ul>
+                    <div class="review-footer">
+                        <span class="review-price">Free</span>
+                        <a href="#" class="review-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rank">#4</div>
+                    <h3>FX Console</h3>
+                    <div class="review-rating">
+                        <div class="review-stars">★★★★☆</div>
+                        <span class="review-score">4.2/5.0</span>
+                    </div>
+                    <p class="review-description">
+                        Speed up your effects workflow with quick access to all effects and presets. 
+                        Essential for motion designers who value efficiency.
+                    </p>
+                    <ul class="review-features">
+                        <li>Quick effect search</li>
+                        <li>Custom effect shortcuts</li>
+                        <li>Preset management</li>
+                        <li>Screenshot functionality</li>
+                    </ul>
+                    <div class="review-footer">
+                        <span class="review-price">Free</span>
+                        <a href="#" class="review-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rank">#5</div>
+                    <h3>Overlord</h3>
+                    <div class="review-rating">
+                        <div class="review-stars">★★★★☆</div>
+                        <span class="review-score">4.0/5.0</span>
+                    </div>
+                    <p class="review-description">
+                        Seamless vector workflow between Illustrator and After Effects. 
+                        Transfer shapes with complete accuracy and maintain editability.
+                    </p>
+                    <ul class="review-features">
+                        <li>Direct shape transfer</li>
+                        <li>Gradient preservation</li>
+                        <li>Update linked artwork</li>
+                        <li>Batch processing support</li>
+                    </ul>
+                    <div class="review-footer">
+                        <span class="review-price">$45</span>
+                        <a href="#" class="review-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-rank">#6</div>
+                    <h3>True Comp Duplicator</h3>
+                    <div class="review-rating">
+                        <div class="review-stars">★★★☆☆</div>
+                        <span class="review-score">3.8/5.0</span>
+                    </div>
+                    <p class="review-description">
+                        Duplicate compositions while maintaining all expressions and references. 
+                        Good for template creation but limited functionality.
+                    </p>
+                    <ul class="review-features">
+                        <li>Smart composition duplication</li>
+                        <li>Expression link preservation</li>
+                        <li>Hierarchy maintenance</li>
+                        <li>Basic batch operations</li>
+                    </ul>
+                    <div class="review-footer">
+                        <span class="review-price">$30</span>
+                        <a href="#" class="review-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Workflow?</h2>
+                <p>Join thousands of professionals who've revolutionized their After Effects experience with Layer Flow</p>
+                <a href="https://layerflow.shop" class="cta-btn">Get Layer Flow - 75% OFF Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>AE Script Reviews</h3>
+                    <p>Professional reviews and recommendations for After Effects scripts and plugins. Helping creators find the perfect tools since 2020.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">𝕏</a>
+                        <a href="#" class="social-link">in</a>
+                        <a href="#" class="social-link">▶</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Reviews</h4>
+                    <a href="#top-pick">Editor's Choice</a>
+                    <a href="#reviews">All Reviews</a>
+                    <a href="#">Animation Tools</a>
+                    <a href="#">Workflow Scripts</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="#">Buying Guide</a>
+                    <a href="#">Installation Help</a>
+                    <a href="#">Video Tutorials</a>
+                    <a href="#">FAQ</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#">Review Process</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Press Kit</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 AE Script Reviews. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclosure</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuToggle?.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements with animations
+        document.querySelectorAll('.review-card, .trust-item').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

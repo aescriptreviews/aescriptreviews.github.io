@@ -34,12 +34,10 @@
         display: none;
         animation: slideUp 0.3s ease-out;
       }
-
       @keyframes slideUp {
         from { transform: translateY(100%); }
-        to { transform: translateY(0); }
+        to   { transform: translateY(0); }
       }
-
       #cookie-consent-banner .consent-container {
         max-width: 1200px;
         margin: 0 auto;
@@ -49,20 +47,17 @@
         flex-wrap: wrap;
         gap: 20px;
       }
-
       #cookie-consent-banner .consent-text {
         flex: 1;
         min-width: 300px;
         font-size: 14px;
         line-height: 1.5;
       }
-
       #cookie-consent-banner .consent-buttons {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
       }
-
       #cookie-consent-banner button {
         padding: 10px 24px;
         border: none;
@@ -72,37 +67,30 @@
         cursor: pointer;
         transition: all 0.2s;
       }
-
       #cookie-consent-banner .accept-btn {
-        background: #4CAF50;
+        background: #4caf50;
         color: white;
       }
-
       #cookie-consent-banner .accept-btn:hover {
         background: #45a049;
         transform: translateY(-1px);
       }
-
       #cookie-consent-banner .decline-btn {
         background: #666;
         color: white;
       }
-
       #cookie-consent-banner .decline-btn:hover {
         background: #555;
       }
-
       #cookie-consent-banner a {
-        color: #4CAF50;
+        color: #4caf50;
         text-decoration: underline;
       }
-
       @media (max-width: 768px) {
         #cookie-consent-banner .consent-container {
           flex-direction: column;
           text-align: center;
         }
-        
         #cookie-consent-banner .consent-buttons {
           width: 100%;
           justify-content: center;
@@ -110,296 +98,73 @@
       }
     </style>
 
-    <!-- Consent Mode Script (BEFORE Google Analytics) -->
+    <!-- Consent Mode v2 Script (BEFORE Google Analytics) -->
     <script>
-      // Set default consent state (denied)
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      function gtag(){ dataLayer.push(arguments); }
+
+      // Default: grant for non-EEA
+      gtag('consent','default',{
+        'ad_storage':'granted',
+        'analytics_storage':'granted',
+        'ad_user_data':'granted',
+        'ad_personalization':'granted'
       });
 
-      // Check if user has already made a choice
-      const consentStatus = localStorage.getItem('cookieConsent');
-      
-      if (!consentStatus) {
-        // No previous choice, show banner
-        window.addEventListener('DOMContentLoaded', function() {
-          document.getElementById('cookie-consent-banner').style.display = 'block';
-        });
-      } else if (consentStatus === 'granted') {
-        // User previously accepted, update consent
-        gtag('consent', 'update', {
-          'ad_storage': 'granted',
-          'ad_user_data': 'granted',
-          'ad_personalization': 'granted',
-          'analytics_storage': 'granted'
-        });
-      }
-
-      // Handle user's consent choice
-      function handleConsent(accepted) {
-        const banner = document.getElementById('cookie-consent-banner');
-        
-        if (accepted) {
-          // User accepted cookies
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
-          });
-          localStorage.setItem('cookieConsent', 'granted');
-          localStorage.setItem('consentDate', new Date().toISOString());
-        } else {
-          // User declined cookies
-          gtag('consent', 'update', {
-            'ad_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied',
-            'analytics_storage': 'denied'
-          });
-          localStorage.setItem('cookieConsent', 'denied');
-          localStorage.setItem('consentDate', new Date().toISOString());
-        }
-        
-        // Hide banner with animation
-        banner.style.animation = 'slideUp 0.3s ease-out reverse';
-        setTimeout(() => {
-          banner.style.display = 'none';
-        }, 300);
-      }
-
-      // Optional: Re-show consent banner after 30 days
-      const consentDate = localStorage.getItem('consentDate');
-      if (consentDate) {
-        const daysSinceConsent = (new Date() - new Date(consentDate)) / (1000 * 60 * 60 * 24);
-        if (daysSinceConsent > 30) {
-          localStorage.removeItem('cookieConsent');
-          localStorage.removeItem('consentDate');
-          window.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('cookie-consent-banner').style.display = 'block';
-          });
-        }
-      }
+      // Override: deny for EU/EEA + wait
+      gtag('consent','default',{
+        region:[
+          'AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE',
+          'GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT',
+          'RO','SK','SI','ES'
+        ],
+        'ad_storage':'denied',
+        'analytics_storage':'denied',
+        'ad_user_data':'denied',
+        'ad_personalization':'denied',
+        'wait_for_update':500
+      });
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-X8C30SD79T"
-    ></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8C30SD79T"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-X8C30SD79T");
+      gtag('js', new Date());
+      gtag('config','G-X8C30SD79T');
     </script>
 
-    <!-- Google AdSense Auto‑Ads (domain verification + ads) -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3256270907730042"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Google AdSense Auto‑Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3256270907730042" crossorigin="anonymous"></script>
 
     <!-- Main Site Styles -->
     <style>
-      :root {
-        --midnight: #0c0f16;
-        --card-bg: #141925;
-        --cyan: #00eaff;
-        --pink: #ff2bdd;
-        --yellow: #ffe54c;
-        --text: #e9ecf1;
-        --muted: #8b93a7;
-      }
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 6rem;
-      }
-      body {
-        font-family: "Inter", sans-serif;
-        background: var(--midnight);
-        color: var(--text);
-        line-height: 1.6;
-        min-height: 100vh;
-      }
-
-      /* Header */
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: rgba(12, 15, 22, 0.8);
-        backdrop-filter: blur(12px) saturate(160%);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-        padding: 1rem 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      header h1 {
-        font-size: 1.35rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-      }
-      nav a {
-        color: var(--text);
-        text-decoration: none;
-        margin-left: 1.5rem;
-        font-weight: 600;
-        position: relative;
-      }
-      nav a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        width: 0;
-        height: 2px;
-        background: linear-gradient(90deg, var(--cyan), var(--pink));
-        transition: width 0.3s;
-      }
-      nav a:hover::after {
-        width: 100%;
-      }
-
-      /* Hero */
-      .hero {
-        padding: 6rem 2rem 8rem;
-        text-align: center;
-        background: radial-gradient(
-            at 20% 20%,
-            rgba(0, 255, 255, 0.25) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            at 80% 30%,
-            rgba(255, 43, 221, 0.35) 0%,
-            transparent 55%
-          ),
-          radial-gradient(
-            at 50% 80%,
-            rgba(255, 229, 76, 0.2) 0%,
-            transparent 60%
-          ),
-          var(--midnight);
-        background-repeat: no-repeat;
-      }
-      .hero h2 {
-        font-size: clamp(2.2rem, 5vw, 3.5rem);
-        font-weight: 900;
-        margin-bottom: 1rem;
-      }
-      .hero p {
-        font-size: 1.075rem;
-        color: var(--muted);
-        max-width: 680px;
-        margin: 0 auto;
-      }
-
-      /* Grid */
-      .tools {
-        padding: 4rem 2rem 6rem;
-        scroll-margin-top: 6rem;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
-        max-width: 1400px;
-        margin: 0 auto;
-      }
-      .card {
-        display: flex;
-        flex-direction: column;
-        background: var(--card-bg);
-        border-radius: 16px;
-        padding: 2.5rem 2rem 3rem;
-        overflow: hidden;
-        transition: transform 0.35s, box-shadow 0.35s, filter 0.35s;
-      }
-      .card:hover {
-        transform: translateY(-6px) scale(1.03);
-        box-shadow: 0 0 12px rgba(0, 234, 255, 0.6),
-          0 0 24px rgba(255, 43, 221, 0.45);
-        filter: brightness(1.15) saturate(120%);
-      }
-      .card h3 {
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 0.75rem;
-        word-break: break-word;
-      }
-      .card p {
-        color: var(--muted);
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-        min-height: 3.5em;
-      }
-      .cta {
-        margin-top: auto;
-        display: inline-block;
-        font-weight: 600;
-        padding: 0.6rem 1.2rem;
-        border-radius: 8px;
-        color: #0c0f16;
-        background: linear-gradient(90deg, var(--cyan), var(--pink));
-        text-decoration: none;
-        transition: opacity 0.3s;
-      }
-      .cta:hover {
-        opacity: 0.85;
-      }
-
-      /* About */
-      #about {
-        padding: 4rem 2rem;
-        background: #0f131d;
-        scroll-margin-top: 6rem;
-      }
-      #about h2 {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 800;
-        margin-bottom: 1rem;
-      }
-      #about p {
-        max-width: 840px;
-        margin: 0 auto;
-        font-size: 1.05rem;
-        color: var(--muted);
-        line-height: 1.75;
-      }
-
-      footer {
-        padding: 2rem;
-        text-align: center;
-        font-size: 0.9rem;
-        color: var(--muted);
-      }
+      :root { --midnight:#0c0f16;--card-bg:#141925;--cyan:#00eaff;--pink:#ff2bdd;--yellow:#ffe54c;--text:#e9ecf1;--muted:#8b93a7; }
+      * { box-sizing:border-box; margin:0; padding:0; }
+      html { scroll-behavior:smooth; scroll-padding-top:6rem; }
+      body { font-family:"Inter",sans-serif; background:var(--midnight); color:var(--text); line-height:1.6; min-height:100vh; }
+      header{position:sticky;top:0;z-index:1000;background:rgba(12,15,22,0.8);backdrop-filter:blur(12px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 2px 8px rgba(0,0,0,0.6);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+      header h1{font-size:1.35rem;font-weight:700;letter-spacing:0.05em;}
+      nav a{color:var(--text);text-decoration:none;margin-left:1.5rem;font-weight:600;position:relative;}
+      nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--pink));transition:width .3s;}
+      nav a:hover::after{width:100%;}
+      .hero{padding:6rem 2rem 8rem;text-align:center;background:radial-gradient(at20%20%,rgba(0,255,255,0.25)0%,transparent50%),radial-gradient(at80%30%,rgba(255,43,221,0.35)0%,transparent55%),radial-gradient(at50%80%,rgba(255,229,76,0.2)0%,transparent60%),var(--midnight);background-repeat:no-repeat;}
+      .hero h2{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;margin-bottom:1rem;}
+      .hero p{font-size:1.075rem;color:var(--muted);max-width:680px;margin:0 auto;}
+      .tools{padding:4rem 2rem 6rem;scroll-margin-top:6rem;}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem;max-width:1400px;margin:0 auto;}
+      .card{display:flex;flex-direction:column;background:var(--card-bg);border-radius:16px;padding:2.5rem 2rem 3rem;overflow:hidden;transition:transform .35s,box-shadow .35s,filter .35s;}
+      .card:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 0 12px rgba(0,234,255,0.6),0 0 24px rgba(255,43,221,0.45);filter:brightness(1.15) saturate(120%);}
+      .card h3{font-size:1.25rem;font-weight:700;margin-bottom:.75rem;word-break:break-word;} .card p{color:var(--muted);font-size:.95rem;margin-bottom:1.5rem;min-height:3.5em;} .cta{margin-top:auto;display:inline-block;font-weight:600;padding:.6rem 1.2rem;border-radius:8px;color:#0c0f16;background:linear-gradient(90deg,var(--cyan),var(--pink));text-decoration:none;transition:opacity .3s;} .cta:hover{opacity:.85;}
+      #about{padding:4rem 2rem;background:#0f131d;scroll-margin-top:6rem;} #about h2{text-align:center;font-size:2rem;font-weight:800;margin-bottom:1rem;} #about p{max-width:840px;margin:0 auto;font-size:1.05rem;color:var(--muted);line-height:1.75;}
+      footer{padding:2rem;text-align:center;font-size:.9rem;color:var(--muted);}
     </style>
   </head>
   <body>
-    <!-- Cookie Consent Banner (RIGHT AFTER BODY TAG) -->
+    <!-- Cookie Consent Banner -->
     <div id="cookie-consent-banner">
       <div class="consent-container">
         <div class="consent-text">
-          We use cookies to enhance your experience, analyze site traffic, and serve personalized ads. 
-          By clicking "Accept", you consent to our use of cookies. 
+          We use cookies to enhance your experience, analyze site traffic, and serve personalized ads. By clicking "Accept All", you consent to our use of cookies.
           <a href="/privacy-policy" target="_blank">Learn more</a>
         </div>
         <div class="consent-buttons">
@@ -419,142 +184,83 @@
 
     <section class="hero">
       <h2>Top‑Ranked After Effects Tools</h2>
-      <p>
-        Save hours on every project. These eight scripts & plugins stood out in
-        our 2025 deep‑dive testing.
-      </p>
+      <p>Save hours on every project. These eight scripts & plugins stood out in our 2025 deep‑dive testing.</p>
     </section>
 
     <section id="tools" class="tools">
       <div class="grid">
         <div class="card">
           <h3>1 · Layer Flow</h3>
-          <p>
-            Instantly duplicate, organize, and time‑align layers for flawless
-            compositing.
-          </p>
-          <a
-            class="cta"
-            href="https://www.layerflow.shop"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
+          <p>Instantly duplicate, organize, and time‑align layers for flawless compositing.</p>
+          <a class="cta" href="https://www.layerflow.shop" target="_blank" rel="noopener">Learn More</a>
         </div>
         <div class="card">
           <h3>2 · Flow – Easing graph editor</h3>
-          <p>
-            Apply and tweak custom motion curves right inside After Effects.
-          </p>
-          <a
-            class="cta"
-            href="https://aescripts.com/flow/"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
+          <p>Apply and tweak custom motion curves right inside After Effects.</p>
+          <a class="cta" href="https://aescripts.com/flow/" target="_blank" rel="noopener">Learn More</a>
         </div>
         <div class="card">
           <h3>3 · Motion Bro – Preset engine</h3>
-          <p>
-            Drag‑and‑drop transitions & effects with a smart, searchable preset
-            manager.
-          </p>
-          <a
-            class="cta"
-            href="https://motionbro.com/"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
+          <p>Drag‑and‑drop transitions & effects with a smart, searchable preset manager.</p>
+          <a class="cta" href="https://motionbro.com/" target="_blank" rel="noopener">Learn More</a>
         </div>
         <div class="card">
           <h3>4 · FX Console – Workflow launcher</h3>
-          <p>
-            Lightning‑fast panel from Video Copilot to find effects and presets
-            via hotkeys.
-          </p>
-          <a
-            class="cta"
-            href="https://www.videocopilot.net/blog/2018/05/fx-console-updated-to-v1-0-3/"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
+          <p>Lightning‑fast panel from Video Copilot to find effects and presets via hotkeys.</p>
+          <a class="cta" href="https://www.videocopilot.net/blog/2018/05/fx-console-updated-to-v1-0-3/" target="_blank" rel="noopener">Learn More</a>
         </div>
         <div class="card">
           <h3>5 · Deep Glow 2 – Physically‑accurate glow</h3>
-          <p>
-            Inverse‑square falloff, chromatic aberration & GPU acceleration for
-            perfect glows.
-          </p>
-          <a
-            class="cta"
-            href="https://aescripts.com/deep-glow/"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
+          <p>Inverse‑square falloff, chromatic aberration & GPU acceleration for perfect glows.</p>
+          <a class="cta" href="https://aescripts.com/deep-glow/" target="_blank" rel="noopener">Learn More</a>
         </div>
         <div class="card">
           <h3>6 · Animation Composer – Presets suite</h3>
-          <p>
-            Massive library of text, shape, and transition presets with
-            intuitive UI.
-          </p>
-          <a
-            class="cta"
-            href="https://misterhorse.com/animation-composer"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
+          <p>Massive library of text, shape, and transition presets with intuitive UI.</p>
+          <a class="cta" href="https://misterhorse.com/animation-composer" target="_blank" rel="noopener">Learn More</a>
         </div>
         <div class="card">
           <h3>7 · DUIK Ángela – Rigging & animation toolkit</h3>
-          <p>
-            Open‑source powerhouse for character rigs, IK, and advanced
-            animation automation.
-          </p>
-          <a
-            class="cta"
-            href="https://rxlaboratory.org/tools/duik-angela/"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
+          <p>Open‑source powerhouse for character rigs, IK, and advanced animation automation.</p>
+          <a class="cta" href="https://rxlaboratory.org/tools/duik-angela/" target="_blank" rel="noopener">Learn More</a>
         </div>
         <div class="card">
           <h3>8 · Stardust</h3>
-          <p>
-            Modular 3‑D particle system & VFX environment all inside After
-            Effects.
-          </p>
-          <a
-            class="cta"
-            href="https://superluminal.tv/"
-            target="_blank"
-            rel="noopener"
-            >Learn More</a
-          >
+          <p>Modular 3‑D particle system & VFX environment all inside After Effects.</p>
+          <a class="cta" href="https://superluminal.tv/" target="_blank" rel="noopener">Learn More</a>
         </div>
       </div>
     </section>
 
     <section id="about">
       <h2>About Us</h2>
-      <p>
-        We're a collective of motion designers and post production engineers on
-        a mission to uncover the best workflow tools out there. Every year we
-        dive deep, testing scripts and plugins hands on to see which ones
-        actually boost speed, improve usability, and spark creativity. Got a
-        favorite tool we should check out? Or a question you've been stuck on?
-        Let's talk. Email: aescriptreviews2025@gmail.com
-      </p>
+      <p>We're a collective of motion designers and post production engineers on a mission to uncover the best workflow tools out there. Every year we dive deep, testing scripts and plugins hands on to see which ones actually boost speed, improve usability, and spark creativity. Got a favorite tool we should check out? Or a question you've been stuck on? Let's talk. Email: aescriptreviews2025@gmail.com</p>
     </section>
 
     <footer>
       <p>© 2025 AE Script Reviews. All rights reserved.</p>
     </footer>
+
+    <!-- Consent Logic -->
+    <script>
+      (function(){
+        const banner=document.getElementById('cookie-consent-banner'), KEY='cookieConsent', DATE='consentDate', EXP=30;
+        function days(d){return (Date.now()-new Date(d).getTime())/864e5;}
+        const prev=localStorage.getItem(KEY), pd=localStorage.getItem(DATE);
+        if(prev&&pd&&days(pd)<EXP){
+          gtag('consent','update',{ 'ad_storage':prev,'analytics_storage':prev,'ad_user_data':prev,'ad_personalization':prev });
+        } else {
+          banner.style.display='block';
+        }
+      })();
+      function handleConsent(ok){
+        const s=ok?'granted':'denied';
+        gtag('consent','update',{ 'ad_storage':s,'analytics_storage':s,'ad_user_data':s,'ad_personalization':s });
+        if(ok){ gtag('config','G-X8C30SD79T',{page_path:location.pathname}); }
+        localStorage.setItem('cookieConsent',s);
+        localStorage.setItem('consentDate',new Date().toISOString());
+        document.getElementById('cookie-consent-banner').style.display='none';
+      }
+    </script>
   </body>
 </html>

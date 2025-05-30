@@ -110,19 +110,35 @@
       }
     </style>
 
-    <!-- Consent Mode Script (BEFORE Google Analytics) -->
+    <!-- Consent Mode Setup - MUST be first -->
     <script>
-      // Set default consent state (denied)
+      // Define dataLayer and the gtag function.
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      
+
+      // Set default consent to 'denied' as a placeholder
+      // Determine actual values based on your own requirements
       gtag('consent', 'default', {
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
         'analytics_storage': 'denied'
       });
+    </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8C30SD79T"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-X8C30SD79T');
+      
+      // Additional recommended features
+      gtag('set', 'url_passthrough', true);  // Pass ad click info through URLs
+      gtag('set', 'ads_data_redaction', true);  // Redact ads data when consent denied
+    </script>
+
+    <!-- Consent Banner Logic -->
+    <script>
       // Check if user has already made a choice
       const consentStatus = localStorage.getItem('cookieConsent');
       
@@ -186,20 +202,6 @@
           });
         }
       }
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-X8C30SD79T"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-X8C30SD79T");
     </script>
 
     <!-- Google AdSense Auto‑Ads (domain verification + ads) -->

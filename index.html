@@ -1,23 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-X8C30SD79T"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-X8C30SD79T");
-    </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>AE Script Reviews 2025 – Best After Effects Scripts & Plugins</title>
     <meta
       name="description"
@@ -33,6 +18,190 @@
       rel="stylesheet"
     />
 
+    <!-- Cookie Consent CSS -->
+    <style>
+      #cookie-consent-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        color: #fff;
+        padding: 20px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 99999;
+        font-family: Arial, sans-serif;
+        display: none;
+        animation: slideUp 0.3s ease-out;
+      }
+
+      @keyframes slideUp {
+        from { transform: translateY(100%); }
+        to { transform: translateY(0); }
+      }
+
+      #cookie-consent-banner .consent-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      #cookie-consent-banner .consent-text {
+        flex: 1;
+        min-width: 300px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      #cookie-consent-banner .consent-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      #cookie-consent-banner button {
+        padding: 10px 24px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      #cookie-consent-banner .accept-btn {
+        background: #4CAF50;
+        color: white;
+      }
+
+      #cookie-consent-banner .accept-btn:hover {
+        background: #45a049;
+        transform: translateY(-1px);
+      }
+
+      #cookie-consent-banner .decline-btn {
+        background: #666;
+        color: white;
+      }
+
+      #cookie-consent-banner .decline-btn:hover {
+        background: #555;
+      }
+
+      #cookie-consent-banner a {
+        color: #4CAF50;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        #cookie-consent-banner .consent-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        #cookie-consent-banner .consent-buttons {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+
+    <!-- Consent Mode Script (BEFORE Google Analytics) -->
+    <script>
+      // Set default consent state (denied)
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+
+      // Check if user has already made a choice
+      const consentStatus = localStorage.getItem('cookieConsent');
+      
+      if (!consentStatus) {
+        // No previous choice, show banner
+        window.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('cookie-consent-banner').style.display = 'block';
+        });
+      } else if (consentStatus === 'granted') {
+        // User previously accepted, update consent
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+
+      // Handle user's consent choice
+      function handleConsent(accepted) {
+        const banner = document.getElementById('cookie-consent-banner');
+        
+        if (accepted) {
+          // User accepted cookies
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+          });
+          localStorage.setItem('cookieConsent', 'granted');
+          localStorage.setItem('consentDate', new Date().toISOString());
+        } else {
+          // User declined cookies
+          gtag('consent', 'update', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+          });
+          localStorage.setItem('cookieConsent', 'denied');
+          localStorage.setItem('consentDate', new Date().toISOString());
+        }
+        
+        // Hide banner with animation
+        banner.style.animation = 'slideUp 0.3s ease-out reverse';
+        setTimeout(() => {
+          banner.style.display = 'none';
+        }, 300);
+      }
+
+      // Optional: Re-show consent banner after 30 days
+      const consentDate = localStorage.getItem('consentDate');
+      if (consentDate) {
+        const daysSinceConsent = (new Date() - new Date(consentDate)) / (1000 * 60 * 60 * 24);
+        if (daysSinceConsent > 30) {
+          localStorage.removeItem('cookieConsent');
+          localStorage.removeItem('consentDate');
+          window.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('cookie-consent-banner').style.display = 'block';
+          });
+        }
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-X8C30SD79T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-X8C30SD79T");
+    </script>
+
     <!-- Google AdSense Auto‑Ads (domain verification + ads) -->
     <script
       async
@@ -40,6 +209,7 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Main Site Styles -->
     <style>
       :root {
         --midnight: #0c0f16;
@@ -224,6 +394,21 @@
     </style>
   </head>
   <body>
+    <!-- Cookie Consent Banner (RIGHT AFTER BODY TAG) -->
+    <div id="cookie-consent-banner">
+      <div class="consent-container">
+        <div class="consent-text">
+          We use cookies to enhance your experience, analyze site traffic, and serve personalized ads. 
+          By clicking "Accept", you consent to our use of cookies. 
+          <a href="/privacy-policy" target="_blank">Learn more</a>
+        </div>
+        <div class="consent-buttons">
+          <button class="decline-btn" onclick="handleConsent(false)">Decline</button>
+          <button class="accept-btn" onclick="handleConsent(true)">Accept All</button>
+        </div>
+      </div>
+    </div>
+
     <header>
       <h1>AE Script Reviews 2025</h1>
       <nav>
@@ -367,5 +552,9 @@
         Let's talk. Email: aescriptreviews2025@gmail.com
       </p>
     </section>
+
+    <footer>
+      <p>© 2025 AE Script Reviews. All rights reserved.</p>
+    </footer>
   </body>
 </html>
